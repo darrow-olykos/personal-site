@@ -1,1 +1,1 @@
-Personal site of Darrow O'Lykos
+Personal site of darrow-olykos
