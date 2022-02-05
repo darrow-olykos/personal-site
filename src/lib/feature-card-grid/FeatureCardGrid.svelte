@@ -5,21 +5,32 @@
 	<div>
 		What would you like to do?
 		<ul class="horizontal-stack">
-			<li class="left"><span class="text">Read Blog</span></li>
-			<li class="middle-left"><span class="text">Find Events</span></li>
-			<li class="middle-right"><span class="text">Answer Polls</span></li>
-			<li class="right"><span class="text">View Photos</span></li>
+			<li class="left">
+				<a href="/blog">
+					<div class="text">Read Blog</div>
+				</a>
+			</li>
+			<li class="middle-left">
+				<a href="/events">
+					<div class="text">Find Events</div>
+				</a>
+			</li>
+			<li class="middle-right">
+				<a href="/polls">
+					<div class="text">Answer polls</div>
+				</a>
+			</li>
+			<li class="right">
+				<a href="/photos">
+					<div class="text">View photos</div>
+				</a>
+			</li>
 		</ul>
 	</div>
 	<div>
 		Featured
 		<ul class="vertical-stack">
-			{#each [
-				'Latest Blog Post: Implementing Visitor Pattern in Rust',
-				'Upcoming Event: Rust for Rustaceans Chapter 3 Discussion',
-				'Poll: Recommend Software Engineering Book for Senior Devs?',
-				'Latest Photo: "Downtown Boston Sunrise"'
-			] as text}
+			{#each ['Latest Blog Post: Implementing Visitor Pattern in Rust', 'Upcoming Event: Rust for Rustaceans Chapter 3 Discussion', 'Poll: Recommend Software Engineering Book for Senior Devs?', 'Latest Photo: "Downtown Boston Sunrise"'] as text}
 				<li>{text}</li>
 			{/each}
 		</ul>
@@ -27,6 +38,30 @@
 </div>
 
 <style>
+	ul > li {
+		position: relative;
+	}
+
+	.text {
+		color: var(--primary-color);
+		z-index: 3;
+		position: relative;
+		padding-left: 10px;
+		margin-top: 10px;
+		height: 100%;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--primary-color);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: block;
+	}
+
 	.container {
 		display: flex;
 		flex-wrap: wrap;
@@ -99,16 +134,6 @@
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: 2;
-	}
-
-	ul > li {
-		position: relative;
-	}
-
-	.text {
-		color: var(--primary-color);
-		z-index: 3;
-		position: relative;
 	}
 
 	li:hover {
