@@ -10,11 +10,14 @@
 </main>
 
 <footer>
-	footer
-	<!-- <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p> -->
+	Site designed and implemented by <a href="https://linkedin.com/in/chrisdillinger">Chris Dillinger</a>
 </footer>
 
 <style>
+	a {
+		color: white;
+	}
+
 	main {
 		flex: 1;
 		display: flex;

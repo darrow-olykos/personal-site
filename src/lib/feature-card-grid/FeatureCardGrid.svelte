@@ -6,14 +6,20 @@
 		What would you like to do?
 		<ul class="horizontal-stack">
 			<li class="left"><span class="text">Read Blog</span></li>
-			<li class="middle"><span class="text">Find Events</span></li>
-			<li class="right"><span class="text">Answer Polls</span></li>
+			<li class="middle-left"><span class="text">Find Events</span></li>
+			<li class="middle-right"><span class="text">Answer Polls</span></li>
+			<li class="right"><span class="text">View Photos</span></li>
 		</ul>
 	</div>
 	<div>
 		Featured
 		<ul class="vertical-stack">
-			{#each ['Latest Blog Post: Implementing Visitor Pattern in Rust', 'Upcoming Event: Rust for Rustaceans Chapter 3 Discussion', 'Poll: Recommend Software Engineering Book for Senior Devs?'] as text}
+			{#each [
+				'Latest Blog Post: Implementing Visitor Pattern in Rust',
+				'Upcoming Event: Rust for Rustaceans Chapter 3 Discussion',
+				'Poll: Recommend Software Engineering Book for Senior Devs?',
+				'Latest Photo: "Downtown Boston Sunrise"'
+			] as text}
 				<li>{text}</li>
 			{/each}
 		</ul>
@@ -28,6 +34,44 @@
 		justify-content: center;
 	}
 
+	.horizontal-stack {
+		display: flex;
+		justify-content: start;
+		list-style: none;
+		gap: 16px;
+	}
+
+	.horizontal-stack > * {
+		border: 1px var(--primary-color) solid;
+		width: 108px;
+		height: 376px;
+		padding: 10px;
+	}
+
+	.horizontal-stack > .left {
+		background-image: url(/photos/photo-charles-river-bw.jpeg);
+		background-size: cover;
+	}
+
+	.horizontal-stack > .middle-left {
+		background-image: url(/photos/photo-charles-river-bw.jpeg);
+		background-size: cover;
+		background-position-x: -132px;
+	}
+
+	.horizontal-stack > .middle-right {
+		background-image: url(/photos/photo-charles-river-bw.jpeg);
+		background-size: cover;
+		background-position-x: -260px;
+	}
+
+	.horizontal-stack > .right {
+		background-image: url(/photos/photo-charles-river-bw.jpeg);
+		background-size: cover;
+		background-position: right;
+		background-position-x: 142px;
+	}
+
 	.vertical-stack {
 		display: flex;
 		flex-direction: column;
@@ -38,45 +82,14 @@
 
 	.vertical-stack > * {
 		border: 1px var(--primary-color) solid;
-		height: 100px;
+		height: 65.5px;
 		padding: 10px;
-		width: 392px;
-	}
-
-	.horizontal-stack {
-		display: flex;
-		justify-content: start;
-		list-style: none;
-		gap: 16px;
-	}
-
-	.horizontal-stack > * {
-		border: 1px var(--primary-color) solid;
-		width: 120px;
-		height: 376px;
-		padding: 10px;
-	}
-
-	.horizontal-stack > .left {
-		background-image: url(/photos/photo-charles-river-bw.jpeg);
-		background-size: cover;
-	}
-
-	.horizontal-stack > .middle {
-		background-image: url(/photos/photo-charles-river-bw.jpeg);
-		background-size: cover;
-		background-position-x: center;
-	}
-
-	.horizontal-stack > .right {
-		background-image: url(/photos/photo-charles-river-bw.jpeg);
-		background-size: cover;
-		background-position: right;
-		background-position-x: 197px;
+		width: 380px;
 	}
 
 	.left::after,
-	.middle::after,
+	.middle-left::after,
+	.middle-right::after,
 	.right::after {
 		content: '';
 		position: absolute;
@@ -85,17 +98,17 @@
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.5);
-        z-index: 2;
+		z-index: 2;
 	}
 
-    ul > li {
+	ul > li {
 		position: relative;
 	}
 
 	.text {
 		color: var(--primary-color);
 		z-index: 3;
-        position: relative;
+		position: relative;
 	}
 
 	li:hover {
