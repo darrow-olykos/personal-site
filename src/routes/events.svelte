@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import Icon from '@iconify/svelte/dist/OfflineIcon.svelte';
-	import shareFill from '@iconify/icons-eva/share-fill';
+	import shareFill from '@iconify/icons-eva/share-fill.js';
 </script>
 
 <svelte:head>

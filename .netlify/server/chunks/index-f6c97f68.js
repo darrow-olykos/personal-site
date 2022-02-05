@@ -13,7 +13,9 @@ __export(exports, {
   e: () => escape,
   f: () => now,
   g: () => getContext,
-  h: () => add_attribute,
+  h: () => spread,
+  i: () => escape_object,
+  j: () => add_attribute,
   l: () => loop,
   m: () => missing_component,
   n: () => noop,
@@ -110,6 +112,63 @@ const boolean_attributes = new Set([
   "reversed",
   "selected"
 ]);
+const invalid_attribute_name_character = /[\s'">/=\u{FDD0}-\u{FDEF}\u{FFFE}\u{FFFF}\u{1FFFE}\u{1FFFF}\u{2FFFE}\u{2FFFF}\u{3FFFE}\u{3FFFF}\u{4FFFE}\u{4FFFF}\u{5FFFE}\u{5FFFF}\u{6FFFE}\u{6FFFF}\u{7FFFE}\u{7FFFF}\u{8FFFE}\u{8FFFF}\u{9FFFE}\u{9FFFF}\u{AFFFE}\u{AFFFF}\u{BFFFE}\u{BFFFF}\u{CFFFE}\u{CFFFF}\u{DFFFE}\u{DFFFF}\u{EFFFE}\u{EFFFF}\u{FFFFE}\u{FFFFF}\u{10FFFE}\u{10FFFF}]/u;
+function spread(args, attrs_to_add) {
+  const attributes = Object.assign({}, ...args);
+  if (attrs_to_add) {
+    const classes_to_add = attrs_to_add.classes;
+    const styles_to_add = attrs_to_add.styles;
+    if (classes_to_add) {
+      if (attributes.class == null) {
+        attributes.class = classes_to_add;
+      } else {
+        attributes.class += " " + classes_to_add;
+      }
+    }
+    if (styles_to_add) {
+      if (attributes.style == null) {
+        attributes.style = style_object_to_string(styles_to_add);
+      } else {
+        attributes.style = style_object_to_string(merge_ssr_styles(attributes.style, styles_to_add));
+      }
+    }
+  }
+  let str = "";
+  Object.keys(attributes).forEach((name) => {
+    if (invalid_attribute_name_character.test(name))
+      return;
+    const value = attributes[name];
+    if (value === true)
+      str += " " + name;
+    else if (boolean_attributes.has(name.toLowerCase())) {
+      if (value)
+        str += " " + name;
+    } else if (value != null) {
+      str += ` ${name}="${value}"`;
+    }
+  });
+  return str;
+}
+function merge_ssr_styles(style_attribute, style_directive) {
+  const style_object = {};
+  for (const individual_style of style_attribute.split(";")) {
+    const colon_index = individual_style.indexOf(":");
+    const name = individual_style.slice(0, colon_index).trim();
+    const value = individual_style.slice(colon_index + 1).trim();
+    if (!name)
+      continue;
+    style_object[name] = value;
+  }
+  for (const name in style_directive) {
+    const value = style_directive[name];
+    if (value) {
+      style_object[name] = value;
+    } else {
+      delete style_object[name];
+    }
+  }
+  return style_object;
+}
 const escaped = {
   '"': "&quot;",
   "'": "&#39;",
@@ -119,6 +178,16 @@ const escaped = {
 };
 function escape(html) {
   return String(html).replace(/["'&<>]/g, (match) => escaped[match]);
+}
+function escape_attribute_value(value) {
+  return typeof value === "string" ? escape(value) : value;
+}
+function escape_object(obj) {
+  const result = {};
+  for (const key in obj) {
+    result[key] = escape_attribute_value(obj[key]);
+  }
+  return result;
 }
 function each(items, fn) {
   let str = "";
@@ -177,4 +246,7 @@ function add_attribute(name, value, boolean) {
   if (value == null || boolean && !value)
     return "";
   return ` ${name}${value === true && boolean_attributes.has(name) ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
+}
+function style_object_to_string(style_object) {
+  return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
 }
