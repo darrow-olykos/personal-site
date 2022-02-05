@@ -5,9 +5,9 @@
 	<div>
 		What would you like to do?
 		<ul class="horizontal-stack">
-			{#each ['Read blog', 'Find events', 'Answer Polls'] as text}
-				<li>{text}</li>
-			{/each}
+			<li class="left"><span class="text">Read Blog</span></li>
+			<li class="middle"><span class="text">Find Events</span></li>
+			<li class="right"><span class="text">Answer Polls</span></li>
 		</ul>
 	</div>
 	<div>
@@ -55,6 +55,47 @@
 		width: 120px;
 		height: 376px;
 		padding: 10px;
+	}
+
+	.horizontal-stack > .left {
+		background-image: url(/photos/photo-charles-river-bw.jpeg);
+		background-size: cover;
+	}
+
+	.horizontal-stack > .middle {
+		background-image: url(/photos/photo-charles-river-bw.jpeg);
+		background-size: cover;
+		background-position-x: center;
+	}
+
+	.horizontal-stack > .right {
+		background-image: url(/photos/photo-charles-river-bw.jpeg);
+		background-size: cover;
+		background-position: right;
+		background-position-x: 197px;
+	}
+
+	.left::after,
+	.middle::after,
+	.right::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+	}
+
+    ul > li {
+		position: relative;
+	}
+
+	.text {
+		color: var(--primary-color);
+		z-index: 3;
+        position: relative;
 	}
 
 	li:hover {
