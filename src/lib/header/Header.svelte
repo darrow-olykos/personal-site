@@ -1,10 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
 </script>
 
 <header>
-	<div class="corner" />
 	<nav>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}>
@@ -26,6 +24,9 @@
 		display: flex;
 		justify-content: start;
 		border-bottom: 1px var(--primary-color) solid;
+		width: 100%;
+		max-width: 1024px;
+		margin: 0 auto;
 	}
 
 	.corner {
