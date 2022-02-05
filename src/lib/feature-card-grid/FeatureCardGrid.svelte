@@ -2,23 +2,29 @@
 </script>
 
 <div class="container">
-	<ul class="vertical-stack">
-		{#each [0, 1, 2] as i}
-			<li>{i}</li>
-		{/each}
-	</ul>
-	<ul class="horizontal-stack">
-		{#each [0, 1, 2] as i}
-			<li>{i}</li>
-		{/each}
-	</ul>
+	<div>
+		What would you like to do?
+		<ul class="horizontal-stack">
+			{#each ['Read blog', 'Find events', 'Answer Polls'] as text}
+				<li>{text}</li>
+			{/each}
+		</ul>
+	</div>
+	<div>
+		Featured
+		<ul class="vertical-stack">
+			{#each ['Latest Blog Post: Implementing Visitor Pattern in Rust', 'Upcoming Event: Rust for Rustaceans Chapter 3 Discussion', 'Poll: Recommend Software Engineering Book for Senior Devs?'] as text}
+				<li>{text}</li>
+			{/each}
+		</ul>
+	</div>
 </div>
 
 <style>
 	.container {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 24px;
+		gap: 16px;
 		justify-content: center;
 	}
 
@@ -27,12 +33,12 @@
 		flex-direction: column;
 		justify-content: start;
 		list-style: none;
-		gap: 24px;
+		gap: 16px;
 	}
 
 	.vertical-stack > * {
 		border: 1px var(--primary-color) solid;
-		height: 80px;
+		height: 100px;
 		padding: 10px;
 		width: 392px;
 	}
@@ -41,13 +47,13 @@
 		display: flex;
 		justify-content: start;
 		list-style: none;
-		gap: 24px;
+		gap: 16px;
 	}
 
 	.horizontal-stack > * {
 		border: 1px var(--primary-color) solid;
-		width: 100px;
-		height: 332px;
+		width: 120px;
+		height: 376px;
 		padding: 10px;
 	}
 
@@ -69,8 +75,8 @@
 		}
 	}
 
-    @keyframes pulse-white {
-		40% {
+	@keyframes pulse-white {
+		0% {
 			box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
 		}
 
@@ -79,21 +85,20 @@
 		}
 	}
 
-    li:active {
-        animation: strong-pulse-white 1s;
-        animation-fill-mode: forwards;
-    }
+	li:active {
+		animation: strong-pulse-white 1s;
+		animation-fill-mode: forwards;
+	}
 
-    @keyframes strong-pulse-white {
-        0% {
-            transform: scale(1.06);
-            box-shadow: 0 0 0 20px rgba(255, 255, 255, .7);
-        }
+	@keyframes strong-pulse-white {
+		0% {
+			transform: scale(1.06);
+			box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.7);
+		}
 
-        100% {
-            transform: scale(1.06);
-            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-        }
-    }
-
+		100% {
+			transform: scale(1.06);
+			box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+		}
+	}
 </style>
