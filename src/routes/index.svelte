@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-		import FeatureCardGrid from '$lib/feature-card-grid/FeatureCardGrid.svelte';
+	import FeatureCardGrid from '$lib/feature-card-grid/FeatureCardGrid.svelte';
 </script>
 
 <svelte:head>
@@ -15,4 +15,7 @@
 </section>
 
 <style>
+	section {
+		margin-top: 49px;
+	}
 </style>
