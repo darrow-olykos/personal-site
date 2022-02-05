@@ -18,8 +18,7 @@
 			</li>
 		</ul>
 	</nav>
-	<div class="corner">
-	</div>
+	<div class="corner" />
 </header>
 
 <style>
