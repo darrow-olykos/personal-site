@@ -16,7 +16,6 @@
 		<h3 class="upcoming-event__header">Next Event</h3>
 		<div class="upcoming-event__details">
 			<div class="upcoming-event__datetime">Thursday, Feb 10th, @7:00pm</div>
-
 			<div class="upcoming-event__title-row">
 				<div class="upcoming-event__title-container">
 					<div class="upcoming-event__name">DC Rust Book Club: Rust for Rustaceans</div>
@@ -28,7 +27,6 @@
 					alt="ferris, the crab mascot of rust, painted in water-color"
 				/>
 			</div>
-
 			<div class="upcoming-event__share-button">
 				<Icon icon={shareFill} />
 			</div>
@@ -48,7 +46,6 @@
 		line-height: 24px;
 	}
 
-
 	.upcoming-event__title-row {
 		display: flex;
 		gap: 24px;
@@ -66,7 +63,29 @@
 		object-position: 100% -15px;
 	}
 
+	.upcoming-event__share-button {
+		float: right;
+		padding-bottom: -100px;
+	}
+	.upcoming-event__share-button:hover > :global(svg) {
+		cursor: pointer;
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+		animation: pulse-white 1.7s infinite;
+		animation-fill-mode: forwards;
+		transform: scale(1);
+	}
+
 	section {
 		margin-top: 49px;
+	}
+
+	@keyframes pulse-white {
+		0% {
+			box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+		}
+
+		100% {
+			box-shadow: 0 0 0 5px rgba(255, 255, 255, 0);
+		}
 	}
 </style>
