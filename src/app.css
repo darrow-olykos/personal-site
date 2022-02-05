@@ -13,17 +13,16 @@
     --font-mono: 'Fira Mono', monospace;
     --pure-white: #ffffff;
     --primary-color: #f7f7f7;
-    --secondary-color: red;
+    --secondary-color: #030303;
     --tertiary-color: #070707;
     --accent-color: var(--pure-white);
     --heading-color: var(--primary-color);
     --text-color: var(--primary-color);
-    --background-without-opacity: rgba(255, 255, 255, 0.7);
     --column-width: 42rem;
     --column-margin-top: 4rem;
 }
 
 body {
     background-color: var(--tertiary-color);
-    color: var(--primary-color);
+    color: var(--text-color);
 }

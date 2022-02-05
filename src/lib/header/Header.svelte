@@ -25,6 +25,7 @@
 	header {
 		display: flex;
 		justify-content: start;
+		border-bottom: 1px var(--primary-color) solid;
 	}
 
 	.corner {
