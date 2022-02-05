@@ -15,11 +15,11 @@
 	<div class="upcoming-event">
 		<h3 class="upcoming-event__header">Next Event</h3>
 		<div class="upcoming-event__details">
-			<div class="upcoming-event__datetime">Thursday, Feb 10th, @7:00pm</div>
+			<div class="upcoming-event__datetime">Thurs, Feb 10th, @ 7:00 PM EST</div>
 			<div class="upcoming-event__title-row">
 				<div class="upcoming-event__title-container">
-					<div class="upcoming-event__name">DC Rust Book Club: Rust for Rustaceans</div>
-					<div class="upcoming-event__group">DC Rust</div>
+					<div class="upcoming-event__name">Book Club: Rust for Rustaceans</div>
+					<div class="upcoming-event__group">Rust DC</div>
 				</div>
 				<img
 					class="upcoming-event__thumbnail"
@@ -44,6 +44,10 @@
 		border: 1px white solid;
 		padding: 10px;
 		line-height: 24px;
+	}
+
+	.upcoming-event__name {
+		font-family: 'Inconsolata-expanded-bold';
 	}
 
 	.upcoming-event__title-row {
@@ -73,6 +77,10 @@
 		animation: pulse-white 1.7s infinite;
 		animation-fill-mode: forwards;
 		transform: scale(1);
+	}
+
+	.upcoming-event__group {
+		color: gray;
 	}
 
 	section {
