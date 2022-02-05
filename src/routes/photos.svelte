@@ -9,7 +9,7 @@
 	<title>Photos</title>
 </svelte:head>
 
-<section>photos placeholder</section>
+<section>Photos placeholder</section>
 
 <style>
 	section {

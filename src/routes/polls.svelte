@@ -9,7 +9,7 @@
 	<title>Polls</title>
 </svelte:head>
 
-<section>polls placeholder</section>
+<section>Polls placeholder</section>
 
 <style>
 	section {
