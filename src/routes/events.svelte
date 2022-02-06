@@ -39,6 +39,47 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="upcoming-event">
+		<h3 class="upcoming-event__header">Upcoming Events</h3>
+		<div class="upcoming-event__details">
+			<div class="upcoming-event__time-until">Starts in {timeUntilUpcomingEvent} days</div>
+			<div class="upcoming-event__datetime">Thurs, Feb 10th, @ 7:00 PM EST</div>
+			<div class="upcoming-event__title-row">
+				<div class="upcoming-event__title-container">
+					<div class="upcoming-event__name">Book Club: Rust for Rustaceans</div>
+					<div class="upcoming-event__group">Rust DC</div>
+				</div>
+				<img
+					class="upcoming-event__thumbnail"
+					src="/photos/photo-rust-ferris.jpeg"
+					alt="ferris, the crab mascot of rust, painted in water-color"
+				/>
+			</div>
+			<div class="upcoming-event__share-button">
+				<Icon icon={shareFill} />
+			</div>
+		</div>
+		
+		<div class="upcoming-event__details">
+			<div class="upcoming-event__time-until">Starts in {timeUntilUpcomingEvent} days</div>
+			<div class="upcoming-event__datetime">Thurs, Feb 10th, @ 7:00 PM EST</div>
+			<div class="upcoming-event__title-row">
+				<div class="upcoming-event__title-container">
+					<div class="upcoming-event__name">Book Club: Rust for Rustaceans</div>
+					<div class="upcoming-event__group">Rust DC</div>
+				</div>
+				<img
+					class="upcoming-event__thumbnail"
+					src="/photos/photo-rust-ferris.jpeg"
+					alt="ferris, the crab mascot of rust, painted in water-color"
+				/>
+			</div>
+			<div class="upcoming-event__share-button">
+				<Icon icon={shareFill} />
+			</div>
+		</div>
+	</div>
 </section>
 
 <style>
