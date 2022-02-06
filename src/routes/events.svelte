@@ -60,7 +60,7 @@
 				<Icon icon={shareFill} />
 			</div>
 		</div>
-		
+
 		<div class="upcoming-event__details">
 			<div class="upcoming-event__time-until">Starts in {timeUntilUpcomingEvent} days</div>
 			<div class="upcoming-event__datetime">Thurs, Feb 10th, @ 7:00 PM EST</div>
@@ -92,6 +92,9 @@
 		border: 1px white solid;
 		padding: 10px;
 		line-height: 24px;
+	}
+	.upcoming-event__details:not(:first-of-type){
+		margin-top: 16px;
 	}
 
 	.upcoming-event__datetime {
