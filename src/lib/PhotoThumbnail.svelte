@@ -1,8 +1,6 @@
 <script lang="ts">
-
     export let imageURL: string = "";
     export let height: string = "100px";
-
 </script>
 
 <div>
