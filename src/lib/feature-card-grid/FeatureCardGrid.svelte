@@ -47,6 +47,7 @@
 		z-index: 3;
 		position: relative;
 		padding-left: 10px;
+		padding-right: 5px;
 		margin-top: 10px;
 		height: 100%;
 	}
@@ -81,6 +82,15 @@
 		width: 108px;
 		height: 376px;
 		padding: 10px;
+	}
+
+	@media (max-width: 500px) {
+		.horizontal-stack {
+			gap: 10px;
+		}
+		.horizontal-stack > * {
+			width: 86px;
+		}
 	}
 
 	.horizontal-stack > .left {
