@@ -27,8 +27,8 @@ ul {
     --font-mono: 'Fira Mono', monospace;
     --pure-white: #ffffff;
     --primary-color: #f7f7f7;
-    --secondary-color: #030303;
-    --tertiary-color: #070707;
+    --secondary-color: #c8e0f4;
+    --tertiary-color: #141418;
     --accent-color: var(--pure-white);
     --heading-color: var(--primary-color);
     --text-color: var(--primary-color);

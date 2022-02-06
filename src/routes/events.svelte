@@ -46,6 +46,11 @@
 		line-height: 24px;
 	}
 
+	.upcoming-event__datetime {
+		color: var(--secondary-color);
+		text-transform: uppercase;
+	}
+
 	.upcoming-event__name {
 		font-family: 'Inconsolata-expanded-bold';
 	}
