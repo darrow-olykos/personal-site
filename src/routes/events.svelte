@@ -5,6 +5,12 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte/dist/OfflineIcon.svelte';
 	import shareFill from '@iconify/icons-eva/share-fill.js';
+	let today = Date.now();
+	setInterval(() => {
+		today = Date.now();
+	}, 1000);
+	let upcomingEvent = new Date(2022, 1, 10, 19, 0, 0).getTime();
+	$: timeUntilUpcomingEvent = Math.round((upcomingEvent - today) / (1000 * 60 * 60 * 24));
 </script>
 
 <svelte:head>
@@ -15,6 +21,7 @@
 	<div class="upcoming-event">
 		<h3 class="upcoming-event__header">Next Event</h3>
 		<div class="upcoming-event__details">
+			<div class="upcoming-event__time-until">Starts in {timeUntilUpcomingEvent} days</div>
 			<div class="upcoming-event__datetime">Thurs, Feb 10th, @ 7:00 PM EST</div>
 			<div class="upcoming-event__title-row">
 				<div class="upcoming-event__title-container">
@@ -49,6 +56,10 @@
 	.upcoming-event__datetime {
 		color: var(--secondary-color);
 		text-transform: uppercase;
+	}
+
+	.upcoming-event__time-until {
+		float: right;
 	}
 
 	.upcoming-event__name {

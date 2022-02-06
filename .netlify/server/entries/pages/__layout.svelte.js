@@ -60,8 +60,7 @@ const Header = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slot
   $$unsubscribe_page = (0, import_index_f6c97f68.a)(page, (value) => $page = value);
   $$result.css.add(css$1);
   $$unsubscribe_page();
-  return `<header class="${"svelte-qw35m"}"><nav class="${"svelte-qw35m"}"><ul class="${"svelte-qw35m"}"><li class="${["svelte-qw35m", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${"/"}" class="${"svelte-qw35m"}">Home</a></li>
-			</ul></nav>
+  return `<header class="${"svelte-qw35m"}"><nav class="${"svelte-qw35m"}"><ul class="${"svelte-qw35m"}"><li class="${["svelte-qw35m", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a sveltekit:prefetch href="${"/"}" class="${"svelte-qw35m"}">Home</a></li></ul></nav>
 	<div class="${"corner svelte-qw35m"}"></div>
 </header>`;
 });

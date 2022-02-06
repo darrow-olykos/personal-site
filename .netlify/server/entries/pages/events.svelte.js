@@ -452,19 +452,24 @@ const OfflineIcon = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings,
 });
 var events_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".upcoming-event__icon.svelte-b9p9th{height:100px;width:100px;object-fit:cover;object-position:100% -15px}section.svelte-b9p9th{margin-top:49px}",
+  code: ".upcoming-event.svelte-1b0s29o{display:flex;flex-direction:column}.upcoming-event__details.svelte-1b0s29o{border:1px white solid;padding:10px;line-height:24px}.upcoming-event__datetime.svelte-1b0s29o{color:var(--secondary-color);text-transform:uppercase}.upcoming-event__name.svelte-1b0s29o{font-family:'Inconsolata-expanded-bold'}.upcoming-event__title-row.svelte-1b0s29o{display:flex;gap:24px}.upcoming-event__title-container.svelte-1b0s29o{display:flex;flex-direction:column}.upcoming-event__thumbnail.svelte-1b0s29o{height:80px;width:80px;object-fit:cover;object-position:100% -15px}.upcoming-event__share-button.svelte-1b0s29o{float:right;padding-bottom:-100px}.upcoming-event__share-button.svelte-1b0s29o:hover>svg{cursor:pointer;box-shadow:0 0 0 0 rgba(255, 255, 255, 1);animation:svelte-1b0s29o-pulse-white 1.7s infinite;animation-fill-mode:forwards;transform:scale(1)}.upcoming-event__group.svelte-1b0s29o{color:gray}section.svelte-1b0s29o{margin-top:49px}@keyframes svelte-1b0s29o-pulse-white{0%{box-shadow:0 0 0 0 rgba(255, 255, 255, 0.7)}100%{box-shadow:0 0 0 5px rgba(255, 255, 255, 0)}}",
   map: null
 };
 const prerender = true;
 const Events = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slots) => {
+  let timeUntilUpcomingEvent;
+  let today = new Date().valueOf();
+  let upcomingEvent = new Date(2022, 1, 10, 19, 0, 0).valueOf();
   $$result.css.add(css);
+  timeUntilUpcomingEvent = upcomingEvent - today;
   return `${$$result.head += `${$$result.title = `<title>Events</title>`, ""}`, ""}
 
-<section class="${"svelte-b9p9th"}"><div class="${"upcoming-event"}"><h2 class="${"upcoming-event__header"}">Next Event</h2>
-		<img src="${"/photos/photo-rust-ferris.jpeg"}" alt="${"ferris, the crab mascot of rust, painted in water-color"}" class="${"upcoming-event__icon svelte-b9p9th"}">
-		<div class="${"upcoming-event__group"}">DC Rust Book Club</div>
-		<div class="${"upcoming-event__datetime"}">Thursday, Feb 10th, @7:00pm</div>
-		<div class="${"upcoming-event__name"}">DC Rust Book Club: Rust for Rustaceans</div>
-		<div class="${"upcoming-event__share-button"}">${(0, import_index_f6c97f68.v)(OfflineIcon, "Icon").$$render($$result, { icon: import_share_fill.default }, {}, {})}</div></div>
+<section class="${"svelte-1b0s29o"}"><div class="${"upcoming-event svelte-1b0s29o"}"><h3 class="${"upcoming-event__header"}">Next Event</h3>
+		<div class="${"upcoming-event__details svelte-1b0s29o"}"><div class="${"upcoming-event__datetime svelte-1b0s29o"}">Thurs, Feb 10th, @ 7:00 PM EST</div>
+			<div class="${"upcoming-event__time-until"}">${(0, import_index_f6c97f68.e)(timeUntilUpcomingEvent)}</div>
+			<div class="${"upcoming-event__title-row svelte-1b0s29o"}"><div class="${"upcoming-event__title-container svelte-1b0s29o"}"><div class="${"upcoming-event__name svelte-1b0s29o"}">Book Club: Rust for Rustaceans</div>
+					<div class="${"upcoming-event__group svelte-1b0s29o"}">Rust DC</div></div>
+				<img class="${"upcoming-event__thumbnail svelte-1b0s29o"}" src="${"/photos/photo-rust-ferris.jpeg"}" alt="${"ferris, the crab mascot of rust, painted in water-color"}"></div>
+			<div class="${"upcoming-event__share-button svelte-1b0s29o"}">${(0, import_index_f6c97f68.v)(OfflineIcon, "Icon").$$render($$result, { icon: import_share_fill.default }, {}, {})}</div></div></div>
 </section>`;
 });
