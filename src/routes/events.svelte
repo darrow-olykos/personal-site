@@ -12,7 +12,7 @@
 
 <section>
 	<div class="event-list">
-		<h3 class="upcoming-event__header">Next Event</h3>
+		<h3 class="event-list__header">Next Event</h3>
 		<EventCard
 			groupName="Rust DC"
 			name="Book Club: Rust for Rustaceans"
@@ -24,7 +24,7 @@
 	</div>
 
 	<div class="event-list">
-		<h3 class="upcoming-event__header">Upcoming Events</h3>
+		<h3 class="event-list__header">Upcoming Events</h3>
 		<EventCard
 			groupName="Rust DC"
 			name="Book Club: Rust for Rustaceans"
@@ -48,6 +48,14 @@
 	.event-list {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.event-list > :global(*):not(:first-of-type) {
+		margin-top: 16px;
+	}
+
+	.event-list:not(:first-of-type) > .event-list__header {
+		padding-top: 16px;
 	}
 
 	section {

@@ -76,10 +76,6 @@
 		line-height: 24px;
 	}
 
-	.event__details:not(:first-of-type){
-		margin-top: 167px;
-	}
-
 	.event__datetime {
 		color: var(--secondary-color);
 		text-transform: uppercase;
