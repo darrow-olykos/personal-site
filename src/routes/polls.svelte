@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Polls</title>
+	<title>Polls | rustbinaries.com</title>
 </svelte:head>
 
 <section>Polls placeholder</section>

@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Home | rustbinaries.com</title>
 </svelte:head>
 
 <section>

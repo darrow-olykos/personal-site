@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Photos</title>
+	<title>Photo | rustbinaries.com</title>
 </svelte:head>
 
 <section>Photos placeholder</section>
