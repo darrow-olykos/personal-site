@@ -2,10 +2,10 @@
 </script>
 
 <div class="container">
-	<div class="row">
+	<div class="row justify-content-center">
 		<div class="col-lg">
             <div class="title">What would you like to do?</div>
-			<div class="row things-to-do-container">
+			<div class="row no-gutters things-to-do-container">
 				<div class="col action cell1">
 					<a href="/blog">
 						<div class="text">Read Blog</div>
@@ -30,7 +30,7 @@
 		</div>
         <div class="col">
             <div class="title">Featured</div>
-            <div class="row featured-container">
+            <div class="row no-gutters featured-container">
                 {#each ['Latest Blog Post: Implementing Visitor Pattern in Rust', 'Upcoming Event: Rust for Rustaceans Chapter 3 Discussion', 'Poll: Recommend Software Engineering Book for Senior Devs?', 'Latest Photo: "Downtown Boston Sunrise"'] as text}
                     <div class="col-12 action">{text}</div>
                 {/each}
@@ -42,7 +42,6 @@
 <style>
 	.title {
 		margin-bottom: 16px;
-        margin-left: -16px;
 	}
 
 	/* TODO: is there a less brittle way to accomplish this effect? */
@@ -144,7 +143,7 @@
 
 	.featured-container > * {
 		border: 1px var(--primary-color) solid;
-		height: 65.5px;
+		height: 82px;
 		padding: 10px;
 		width: 380px;
 		margin-bottom: 16px;
@@ -160,6 +159,18 @@
 		height: 100%;
 	}
 
+	a {
+		text-decoration: none;
+		color: var(--primary-color);
+	}
+
+	@media (max-width: 600px) {
+		.things-to-do-container > .action {
+			width: 78px;
+			margin-right: 10px;
+		}
+	}
+
     @media (max-width: 400px) {
         .things-to-do-container > .action {
             max-width: unset;
@@ -173,15 +184,4 @@
         }
     }
 
-	a {
-		text-decoration: none;
-		color: var(--primary-color);
-	}
-
-	@media (max-width: 600px) {
-		.things-to-do-container > .action {
-			width: 78px;
-			margin-right: 10px;
-		}
-	}
 </style>
