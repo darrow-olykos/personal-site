@@ -1,47 +1,49 @@
 <script lang="ts">
 </script>
 
-<div class="container">
-	<div>
-		<div class="title">What would you like to do?</div>
-		<r-grid class="things-to-do-container" columns="4">
-			<r-cell class="action cell1">
-				<a href="/blog">
-					<div class="text">Read Blog</div>
-				</a>
-			</r-cell>
-			<r-cell class="action cell2">
-				<a href="/events">
-					<div class="text">Find Events</div>
-				</a>
-			</r-cell>
-			<r-cell class="action cell3">
-				<a href="/polls">
-					<div class="text">Answer polls</div>
-				</a>
-			</r-cell>
-			<r-cell class="action cell4">
-				<a href="/photos">
-					<div class="text">View photos</div>
-				</a>
-			</r-cell>
-		</r-grid>
-	</div>
-	<div>
-		<div class="title">Featured</div>
-		<r-grid class="featured-container" columns="1">
-			{#each ['Latest Blog Post: Implementing Visitor Pattern in Rust', 'Upcoming Event: Rust for Rustaceans Chapter 3 Discussion', 'Poll: Recommend Software Engineering Book for Senior Devs?', 'Latest Photo: "Downtown Boston Sunrise"'] as text}
-				<r-cell class="action">{text}</r-cell>
-			{/each}
-		</r-grid>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg">
+			<div class="title">What would you like to do?</div>
+			<div class="row things-to-do-container">
+				<div class="col action cell1">
+					<a href="/blog">
+						<div class="text">Read Blog</div>
+					</a>
+				</div>
+                <div class="col action cell2">
+                    <a href="/events">
+                        <div class="text">Find Events</div>
+                    </a>
+				</div>
+                <div class="col action cell3">
+                    <a href="/polls">
+                        <div class="text">Answer polls</div>
+                    </a>
+				</div>
+                <div class="col action cell4">
+                    <a href="/photos">
+                        <div class="text">View photos</div>
+                    </a>
+				</div>
+			</div>
+		</div>
+        <div class="col">
+            <div class="title">Featured</div>
+            <div class="row featured-container">
+                {#each ['Latest Blog Post: Implementing Visitor Pattern in Rust', 'Upcoming Event: Rust for Rustaceans Chapter 3 Discussion', 'Poll: Recommend Software Engineering Book for Senior Devs?', 'Latest Photo: "Downtown Boston Sunrise"'] as text}
+                    <div class="col-12 action">{text}</div>
+                {/each}
+            </div>
+        </div>
 	</div>
 </div>
 
 <style>
-	.container {
+	.container3 {
 		display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 	.title {
 		margin-bottom: 16px;
@@ -72,14 +74,14 @@
 		background-position-x: 142px;
 	}
 
-    .things-to-do-container {
-        margin-bottom: 32px;
-    }
+	.things-to-do-container {
+		margin-bottom: 32px;
+	}
 
 	.things-to-do-container > .action {
 		position: relative;
 		border: 1px var(--primary-color) solid;
-		width: 108px;
+		max-width: 108px;
 		height: 376px;
 		padding: 10px;
 		margin-right: 16px;
@@ -162,7 +164,7 @@
 		height: 100%;
 	}
 
-	a {
+	a.a {
 		text-decoration: none;
 		color: var(--primary-color);
 		position: absolute;
