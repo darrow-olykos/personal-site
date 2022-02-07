@@ -2,23 +2,17 @@
     import Icon from '@iconify/svelte/dist/OfflineIcon.svelte';
 	import shareFill from '@iconify/icons-eva/share-fill.js';
 
+    import { time } from './stores';
+
     // props
     export let groupName: string;
     export let name: string;
     export let thumbnailUrl: string;
     export let thumbnailAlt: string;
     export let datetimeInMs: number;
-
     export let recurs: undefined | 'weekly' | 'biweekly';
 
     // behavior
-    const UPDATE_FREQUENCY_IN_MS = 1000;
-	let todayInMs = Date.now();
-    function updateLatestTime(){
-        todayInMs = Date.now();
-    }
-	setInterval(updateLatestTime, UPDATE_FREQUENCY_IN_MS);
-
     function formatDatetimeFromMs(ms: number){
         return new Date(ms).toLocaleDateString(undefined, {
             weekday: 'long',
@@ -29,7 +23,7 @@
     }
 
     // reactive declarations
-	$: daysUntilEvent = Math.round((datetimeInMs - todayInMs) / (1000 * 60 * 60 * 24));
+	$: daysUntilEvent = Math.round((datetimeInMs - $time.getTime()) / (1000 * 60 * 60 * 24));
     $: formattedDatetime = formatDatetimeFromMs(datetimeInMs);
 </script>
 

@@ -41,6 +41,14 @@
 			thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
 			recurs="biweekly"
 		/>
+		<EventCard
+			groupName="Mock Group"
+			name="Mock event name"
+			datetimeInMs={new Date(2023, 7, 3, 19, 0, 0).getTime()}
+			thumbnailUrl="/photos/photo-rust-ferris.jpeg"
+			thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
+			recurs={undefined}
+		/>
 	</div>
 </section>
 
