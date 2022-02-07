@@ -1,3 +1,2 @@
-### https://rustbinaries.com
-
-Personal site of darrow-olykos
+# personal-site
+source code for https://rustbinaries.com
