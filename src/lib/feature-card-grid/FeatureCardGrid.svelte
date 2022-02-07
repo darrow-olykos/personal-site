@@ -143,7 +143,7 @@
 
 	.featured-container > * {
 		border: 1px var(--primary-color) solid;
-		height: 82px;
+		min-height: 82px;
 		padding: 10px;
 		width: 380px;
 		margin-bottom: 16px;
@@ -154,7 +154,7 @@
 		z-index: 3;
 		position: relative;
 		padding-left: 10px;
-		padding-right: 5px;
+		padding-right: 10px;
 		margin-top: 10px;
 		height: 100%;
 	}
@@ -171,7 +171,7 @@
 		}
 	}
 
-    @media (max-width: 400px) {
+    @media (max-width: 460px) {
         .things-to-do-container > .action {
             max-width: unset;
             height: unset;
@@ -183,5 +183,4 @@
             margin: auto;
         }
     }
-
 </style>
