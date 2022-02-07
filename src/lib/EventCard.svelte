@@ -10,7 +10,7 @@
     export let thumbnailUrl: string;
     export let thumbnailAlt: string;
     export let datetimeInMs: number;
-    export let recurs: undefined | 'weekly' | 'biweekly';
+    export let recurs: 'weekly' | 'biweekly' = undefined;
 
     // behavior
     function formatDatetimeFromMs(ms: number){
