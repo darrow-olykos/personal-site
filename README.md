@@ -1,2 +1,3 @@
-# personal-site
-source code for https://rustbinaries.com
+# https://rustbinaries.com
+
+personal site of darrow-olykos deployed at the URL above
