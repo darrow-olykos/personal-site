@@ -1,73 +1,94 @@
 <script lang="ts">
-    import Icon from '@iconify/svelte/dist/OfflineIcon.svelte';
+	import Icon from '@iconify/svelte/dist/OfflineIcon.svelte';
 	import shareFill from '@iconify/icons-eva/share-fill.js';
 
-    import { time } from './stores';
+	import { time } from './stores';
 
-    // props
-    export let groupName: string;
-    export let name: string;
-    export let thumbnailUrl: string;
-    export let thumbnailAlt: string;
-    export let datetimeInMs: number;
-    export let recurs: 'weekly' | 'biweekly' = undefined;
+	// props
+	export let groupName: string;
+	export let name: string;
+	export let thumbnailUrl: string;
+	export let thumbnailAlt: string;
+	export let datetimeInMs: number;
+	export let recurs: 'weekly' | 'biweekly' = undefined;
 
-    // behavior
-    function formatDatetimeFromMs(ms: number){
-        return new Date(ms).toLocaleDateString(undefined, {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        })
-    }
-
-    // reactive declarations
-	$: daysUntilEvent = Math.round((datetimeInMs - $time.getTime()) / (1000 * 60 * 60 * 24));
-    $: formattedDatetime = formatDatetimeFromMs(datetimeInMs);
-</script>
-
-<div class="event event--bordered">
-    <div class="event__details">
-        <div class="event__time-until">Starts in {daysUntilEvent} days</div>
-        <div class="event__datetime">{formattedDatetime}</div>
-        <div class="event__title-row">
-            <div class="event__title-container">
-                <div class="event__name">{name}</div>
-                <div class="event__group">{groupName}</div>
-            </div>
-            <img
-                class="event__thumbnail"
-                src={thumbnailUrl}
-                alt={thumbnailAlt}
-            />
-            <div class="event__recurrence">
-                {#if recurs}
-                    Recurs {recurs}
-                {:else}
-                    No recurrence
-                {/if}
-            </div>
-        </div>
-        <div class="event__share-button">
-            <Icon icon={shareFill} />
-        </div>
-    </div>
-</div>
-
-<style>
-	.event {
-		display: flex;
-		flex-direction: column;
+	// behavior
+	function formatDatetimeFromMs(ms: number) {
+		return new Date(ms).toLocaleDateString(undefined, {
+			weekday: 'long',
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
+		});
 	}
 
-    .event.event--bordered > .event__details {
-        border: 1px white solid;
-    }
+	// reactive declarations
+	$: daysUntilEvent = Math.round((datetimeInMs - $time.getTime()) / (1000 * 60 * 60 * 24));
+	$: formattedDatetime = formatDatetimeFromMs(datetimeInMs);
+</script>
 
+<div class="row">
+	<div class="col-12 event__details">
+		<div class="row">
+			<div class="col-sm-6 col-xs-12 event__datetime">
+				{formattedDatetime}
+			</div>
+			<div class="col-sm-6 col-xs-12 text-sm-right event__time-until">
+				Starts in {daysUntilEvent} days
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5 col-sm-12">
+				<div class="row">
+					<div class="col-12">
+						{name}
+					</div>
+					<div class="col-12 event__group">
+						{groupName}
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<img class="event__thumbnail" src={thumbnailUrl} alt={thumbnailAlt} />
+			</div>
+			<div class="col-md-3 col-sm-8 text-center text-sm-right text-xs-center event__share-button">
+                <Icon icon={shareFill} />
+            </div>
+		</div>
+	</div>
+</div>
+
+<!--
+<div class="event__details">
+	<div class="event__time-until">Starts in {daysUntilEvent} days</div>
+	<div class="event__datetime">{formattedDatetime}</div>
+	<div class="event__title-row">
+		<div class="event__title-container">
+			<div class="event__name">{name}</div>
+			<div class="event__group">{groupName}</div>
+		</div>
+		<img class="event__thumbnail" src={thumbnailUrl} alt={thumbnailAlt} />
+		<div class="event__recurrence">
+			{#if recurs}
+				Recurs {recurs}
+			{:else}
+				No recurrence
+			{/if}
+		</div>
+	</div>
+	<div class="event__share-button">
+		<Icon icon={shareFill} />
+	</div>
+</div>
+-->
+<style>
 	.event__details {
-		padding: 10px;
 		line-height: 24px;
+		white-space: nowrap;
+		border: 1px solid white;
+        margin-bottom: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
 	}
 
 	.event__datetime {
@@ -76,38 +97,24 @@
 	}
 
 	.event__time-until {
-		float: right;
+		margin-bottom: 16px;
 	}
 
 	.event__name {
 		font-family: 'Inconsolata-expanded-bold';
 	}
 
-	.event__title-row {
-		display: flex;
-		gap: 24px;
-	}
-
-	.event__title-container {
-		display: flex;
-		flex-direction: column;
-	}
-
 	.event__thumbnail {
-		height: 80px;
-		width: 80px;
+		height: 60px;
+		width: 60px;
 		object-fit: cover;
-		object-position: 100% -15px;
+		object-position: 100% -10px;
+		border-radius: 10%;
 	}
 
-    .event__recurrence {
-        margin-left: auto;
+    .event__share-button {
+        align-self: flex-end;
     }
-
-	.event__share-button {
-		float: right;
-		padding-bottom: -100px;
-	}
 
 	.event__share-button:hover > :global(svg) {
 		cursor: pointer;
@@ -131,4 +138,3 @@
 		}
 	}
 </style>
-
