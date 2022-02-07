@@ -160,15 +160,22 @@
 		height: 100%;
 	}
 
-	a.a {
+    @media (max-width: 400px) {
+        .things-to-do-container > .action {
+            max-width: unset;
+            height: unset;
+            margin-bottom: 10px;
+        }
+
+        .text {
+            padding: 0;
+            margin: auto;
+        }
+    }
+
+	a {
 		text-decoration: none;
 		color: var(--primary-color);
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-		display: block;
 	}
 
 	@media (max-width: 600px) {
