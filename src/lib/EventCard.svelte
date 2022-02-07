@@ -58,29 +58,6 @@
 	</div>
 </div>
 
-<!--
-<div class="event__details">
-	<div class="event__time-until">Starts in {daysUntilEvent} days</div>
-	<div class="event__datetime">{formattedDatetime}</div>
-	<div class="event__title-row">
-		<div class="event__title-container">
-			<div class="event__name">{name}</div>
-			<div class="event__group">{groupName}</div>
-		</div>
-		<img class="event__thumbnail" src={thumbnailUrl} alt={thumbnailAlt} />
-		<div class="event__recurrence">
-			{#if recurs}
-				Recurs {recurs}
-			{:else}
-				No recurrence
-			{/if}
-		</div>
-	</div>
-	<div class="event__share-button">
-		<Icon icon={shareFill} />
-	</div>
-</div>
--->
 <style>
 	.event__details {
 		line-height: 24px;

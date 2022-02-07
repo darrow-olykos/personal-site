@@ -25,16 +25,16 @@ __export(exports, {
   default: () => Polls,
   prerender: () => prerender
 });
-var import_index_f6c97f68 = __toModule(require("../../chunks/index-f6c97f68.js"));
+var import_index_ced29248 = __toModule(require("../../chunks/index-ced29248.js"));
 var polls_svelte_svelte_type_style_lang = "";
 const css = {
   code: "section.svelte-bc8okk{margin-top:49px}",
   map: null
 };
 const prerender = true;
-const Polls = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slots) => {
+const Polls = (0, import_index_ced29248.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `${$$result.head += `${$$result.title = `<title>Polls</title>`, ""}`, ""}
+  return `${$$result.head += `${$$result.title = `<title>Polls | rustbinaries.com</title>`, ""}`, ""}
 
 <section class="${"svelte-bc8okk"}">Polls placeholder</section>`;
 });

@@ -39,8 +39,9 @@ __export(exports, {
   default: () => Events,
   prerender: () => prerender
 });
-var import_index_f6c97f68 = __toModule(require("../../chunks/index-f6c97f68.js"));
+var import_index_ced29248 = __toModule(require("../../chunks/index-ced29248.js"));
 var import_share_fill = __toModule(require("@iconify/icons-eva/share-fill.js"));
+var import_index_4fca056e = __toModule(require("../../chunks/index-4fca056e.js"));
 var iconDefaults = Object.freeze({
   left: 0,
   top: 0,
@@ -441,35 +442,115 @@ function generateIcon(props) {
   }
   return render(icon, props);
 }
-const OfflineIcon = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slots) => {
+const OfflineIcon = (0, import_index_ced29248.c)(($$result, $$props, $$bindings, slots) => {
   let data;
   {
     {
       data = generateIcon($$props);
     }
   }
-  return `${data !== null ? `<svg${(0, import_index_f6c97f68.h)([(0, import_index_f6c97f68.i)(data.attributes)], {})}><!-- HTML_TAG_START -->${data.body}<!-- HTML_TAG_END --></svg>` : ``}`;
+  return `${data !== null ? `<svg${(0, import_index_ced29248.h)([(0, import_index_ced29248.i)(data.attributes)], {})}><!-- HTML_TAG_START -->${data.body}<!-- HTML_TAG_END --></svg>` : ``}`;
+});
+const time = (0, import_index_4fca056e.r)(new Date(), function start(set) {
+  const interval = setInterval(() => {
+    set(new Date());
+  }, 1e3);
+  return function stop() {
+    clearInterval(interval);
+  };
+});
+var EventCard_svelte_svelte_type_style_lang = "";
+const css$1 = {
+  code: ".event__details.svelte-lltmf6{line-height:24px;white-space:nowrap;border:1px solid white;margin-bottom:16px;padding-top:16px;padding-bottom:16px}.event__datetime.svelte-lltmf6{color:var(--secondary-color);text-transform:uppercase}.event__time-until.svelte-lltmf6{margin-bottom:16px}.event__thumbnail.svelte-lltmf6{height:60px;width:60px;object-fit:cover;object-position:100% -10px;border-radius:10%}.event__share-button.svelte-lltmf6{align-self:flex-end}.event__share-button.svelte-lltmf6:hover>svg{cursor:pointer;box-shadow:0 0 0 0 rgba(255, 255, 255, 1);animation:svelte-lltmf6-pulse-white 1.7s infinite;animation-fill-mode:forwards;transform:scale(1)}.event__group.svelte-lltmf6{color:gray}@keyframes svelte-lltmf6-pulse-white{0%{box-shadow:0 0 0 0 rgba(255, 255, 255, 0.7)}100%{box-shadow:0 0 0 5px rgba(255, 255, 255, 0)}}",
+  map: null
+};
+function formatDatetimeFromMs(ms) {
+  return new Date(ms).toLocaleDateString(void 0, {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+}
+const EventCard = (0, import_index_ced29248.c)(($$result, $$props, $$bindings, slots) => {
+  let daysUntilEvent;
+  let formattedDatetime;
+  let $time, $$unsubscribe_time;
+  $$unsubscribe_time = (0, import_index_ced29248.a)(time, (value) => $time = value);
+  let { groupName } = $$props;
+  let { name } = $$props;
+  let { thumbnailUrl } = $$props;
+  let { thumbnailAlt } = $$props;
+  let { datetimeInMs } = $$props;
+  let { recurs = void 0 } = $$props;
+  if ($$props.groupName === void 0 && $$bindings.groupName && groupName !== void 0)
+    $$bindings.groupName(groupName);
+  if ($$props.name === void 0 && $$bindings.name && name !== void 0)
+    $$bindings.name(name);
+  if ($$props.thumbnailUrl === void 0 && $$bindings.thumbnailUrl && thumbnailUrl !== void 0)
+    $$bindings.thumbnailUrl(thumbnailUrl);
+  if ($$props.thumbnailAlt === void 0 && $$bindings.thumbnailAlt && thumbnailAlt !== void 0)
+    $$bindings.thumbnailAlt(thumbnailAlt);
+  if ($$props.datetimeInMs === void 0 && $$bindings.datetimeInMs && datetimeInMs !== void 0)
+    $$bindings.datetimeInMs(datetimeInMs);
+  if ($$props.recurs === void 0 && $$bindings.recurs && recurs !== void 0)
+    $$bindings.recurs(recurs);
+  $$result.css.add(css$1);
+  daysUntilEvent = Math.round((datetimeInMs - $time.getTime()) / (1e3 * 60 * 60 * 24));
+  formattedDatetime = formatDatetimeFromMs(datetimeInMs);
+  $$unsubscribe_time();
+  return `<div class="${"row"}"><div class="${"col-12 event__details svelte-lltmf6"}"><div class="${"row"}"><div class="${"col-sm-6 col-xs-12 event__datetime svelte-lltmf6"}">${(0, import_index_ced29248.e)(formattedDatetime)}</div>
+			<div class="${"col-sm-6 col-xs-12 text-sm-right event__time-until svelte-lltmf6"}">Starts in ${(0, import_index_ced29248.e)(daysUntilEvent)} days
+			</div></div>
+		<div class="${"row"}"><div class="${"col-md-5 col-sm-12"}"><div class="${"row"}"><div class="${"col-12"}">${(0, import_index_ced29248.e)(name)}</div>
+					<div class="${"col-12 event__group svelte-lltmf6"}">${(0, import_index_ced29248.e)(groupName)}</div></div></div>
+			<div class="${"col-md-4 col-sm-4"}"><img class="${"event__thumbnail svelte-lltmf6"}"${(0, import_index_ced29248.j)("src", thumbnailUrl, 0)}${(0, import_index_ced29248.j)("alt", thumbnailAlt, 0)}></div>
+			<div class="${"col-md-3 col-sm-8 text-center text-sm-right text-xs-center event__share-button svelte-lltmf6"}">${(0, import_index_ced29248.v)(OfflineIcon, "Icon").$$render($$result, { icon: import_share_fill.default }, {}, {})}</div></div></div></div>
+
+`;
 });
 var events_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".upcoming-event.svelte-1b0s29o{display:flex;flex-direction:column}.upcoming-event__details.svelte-1b0s29o{border:1px white solid;padding:10px;line-height:24px}.upcoming-event__datetime.svelte-1b0s29o{color:var(--secondary-color);text-transform:uppercase}.upcoming-event__name.svelte-1b0s29o{font-family:'Inconsolata-expanded-bold'}.upcoming-event__title-row.svelte-1b0s29o{display:flex;gap:24px}.upcoming-event__title-container.svelte-1b0s29o{display:flex;flex-direction:column}.upcoming-event__thumbnail.svelte-1b0s29o{height:80px;width:80px;object-fit:cover;object-position:100% -15px}.upcoming-event__share-button.svelte-1b0s29o{float:right;padding-bottom:-100px}.upcoming-event__share-button.svelte-1b0s29o:hover>svg{cursor:pointer;box-shadow:0 0 0 0 rgba(255, 255, 255, 1);animation:svelte-1b0s29o-pulse-white 1.7s infinite;animation-fill-mode:forwards;transform:scale(1)}.upcoming-event__group.svelte-1b0s29o{color:gray}section.svelte-1b0s29o{margin-top:49px}@keyframes svelte-1b0s29o-pulse-white{0%{box-shadow:0 0 0 0 rgba(255, 255, 255, 0.7)}100%{box-shadow:0 0 0 5px rgba(255, 255, 255, 0)}}",
+  code: "section.svelte-bc8okk{margin-top:49px}",
   map: null
 };
 const prerender = true;
-const Events = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slots) => {
-  let timeUntilUpcomingEvent;
-  let today = new Date().valueOf();
-  let upcomingEvent = new Date(2022, 1, 10, 19, 0, 0).valueOf();
+const Events = (0, import_index_ced29248.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  timeUntilUpcomingEvent = upcomingEvent - today;
-  return `${$$result.head += `${$$result.title = `<title>Events</title>`, ""}`, ""}
+  return `${$$result.head += `${$$result.title = `<title>Events | rustbinaries.com</title>`, ""}`, ""}
 
-<section class="${"svelte-1b0s29o"}"><div class="${"upcoming-event svelte-1b0s29o"}"><h3 class="${"upcoming-event__header"}">Next Event</h3>
-		<div class="${"upcoming-event__details svelte-1b0s29o"}"><div class="${"upcoming-event__datetime svelte-1b0s29o"}">Thurs, Feb 10th, @ 7:00 PM EST</div>
-			<div class="${"upcoming-event__time-until"}">${(0, import_index_f6c97f68.e)(timeUntilUpcomingEvent)}</div>
-			<div class="${"upcoming-event__title-row svelte-1b0s29o"}"><div class="${"upcoming-event__title-container svelte-1b0s29o"}"><div class="${"upcoming-event__name svelte-1b0s29o"}">Book Club: Rust for Rustaceans</div>
-					<div class="${"upcoming-event__group svelte-1b0s29o"}">Rust DC</div></div>
-				<img class="${"upcoming-event__thumbnail svelte-1b0s29o"}" src="${"/photos/photo-rust-ferris.jpeg"}" alt="${"ferris, the crab mascot of rust, painted in water-color"}"></div>
-			<div class="${"upcoming-event__share-button svelte-1b0s29o"}">${(0, import_index_f6c97f68.v)(OfflineIcon, "Icon").$$render($$result, { icon: import_share_fill.default }, {}, {})}</div></div></div>
+<section class="${"svelte-bc8okk"}"><div class="${"container-fluid"}"><div class="${"row justify-content-center"}"><div class="${"col-12"}"><h3 class="${"event-list__header"}">Next Event</h3>
+				${(0, import_index_ced29248.v)(EventCard, "EventCard").$$render($$result, {
+    groupName: "Rust DC",
+    name: "Book Club: Rust for Rustaceans",
+    datetimeInMs: new Date(2022, 1, 10, 19, 0, 0).getTime(),
+    thumbnailUrl: "/photos/photo-rust-ferris.jpeg",
+    thumbnailAlt: "ferris, the crab mascot of rust, painted with water-color",
+    recurs: "biweekly"
+  }, {}, {})}</div>
+			<div class="${"col-12"}"><h3 class="${"event-list__header"}">Upcoming Events</h3>
+				${(0, import_index_ced29248.v)(EventCard, "EventCard").$$render($$result, {
+    groupName: "Rust DC",
+    name: "Book Club: Rust for Rustaceans",
+    datetimeInMs: new Date(2022, 1, 24, 19, 0, 0).getTime(),
+    thumbnailUrl: "/photos/photo-rust-ferris.jpeg",
+    thumbnailAlt: "ferris, the crab mascot of rust, painted with water-color",
+    recurs: "biweekly"
+  }, {}, {})}
+				${(0, import_index_ced29248.v)(EventCard, "EventCard").$$render($$result, {
+    groupName: "Rust DC",
+    name: "Book Club: Rust for Rustaceans",
+    datetimeInMs: new Date(2022, 2, 3, 19, 0, 0).getTime(),
+    thumbnailUrl: "/photos/photo-rust-ferris.jpeg",
+    thumbnailAlt: "ferris, the crab mascot of rust, painted with water-color",
+    recurs: "biweekly"
+  }, {}, {})}
+				${(0, import_index_ced29248.v)(EventCard, "EventCard").$$render($$result, {
+    groupName: "Mock Group",
+    name: "Mock event name",
+    datetimeInMs: new Date(2022, 3, 3, 19, 0, 0).getTime(),
+    thumbnailUrl: "/photos/photo-rust-ferris.jpeg",
+    thumbnailAlt: "ferris, the crab mascot of rust, painted with water-color"
+  }, {}, {})}</div></div></div>
 </section>`;
 });

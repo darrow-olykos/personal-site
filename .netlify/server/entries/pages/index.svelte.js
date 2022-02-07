@@ -25,28 +25,28 @@ __export(exports, {
   default: () => Routes,
   prerender: () => prerender
 });
-var import_index_f6c97f68 = __toModule(require("../../chunks/index-f6c97f68.js"));
+var import_index_ced29248 = __toModule(require("../../chunks/index-ced29248.js"));
 var FeatureCardGrid_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "ul.svelte-1midkwt>li.svelte-1midkwt{position:relative}.text.svelte-1midkwt.svelte-1midkwt{color:var(--primary-color);z-index:3;position:relative;padding-left:10px;margin-top:10px;height:100%}a.svelte-1midkwt.svelte-1midkwt{text-decoration:none;color:var(--primary-color);position:absolute;height:100%;width:100%;top:0;left:0;display:block}.container.svelte-1midkwt.svelte-1midkwt{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}.horizontal-stack.svelte-1midkwt.svelte-1midkwt{display:flex;justify-content:start;list-style:none;gap:16px}.horizontal-stack.svelte-1midkwt>.svelte-1midkwt{border:1px var(--primary-color) solid;width:108px;height:376px;padding:10px}.horizontal-stack.svelte-1midkwt>.left.svelte-1midkwt{background-image:url(/photos/photo-charles-river-bw.jpeg);background-size:cover}.horizontal-stack.svelte-1midkwt>.middle-left.svelte-1midkwt{background-image:url(/photos/photo-charles-river-bw.jpeg);background-size:cover;background-position-x:-132px}.horizontal-stack.svelte-1midkwt>.middle-right.svelte-1midkwt{background-image:url(/photos/photo-charles-river-bw.jpeg);background-size:cover;background-position-x:-260px}.horizontal-stack.svelte-1midkwt>.right.svelte-1midkwt{background-image:url(/photos/photo-charles-river-bw.jpeg);background-size:cover;background-position:right;background-position-x:142px}.vertical-stack.svelte-1midkwt.svelte-1midkwt{display:flex;flex-direction:column;justify-content:start;list-style:none;gap:16px}.vertical-stack.svelte-1midkwt>.svelte-1midkwt{border:1px var(--primary-color) solid;height:65.5px;padding:10px;width:380px}.left.svelte-1midkwt.svelte-1midkwt::after,.middle-left.svelte-1midkwt.svelte-1midkwt::after,.middle-right.svelte-1midkwt.svelte-1midkwt::after,.right.svelte-1midkwt.svelte-1midkwt::after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.5);z-index:2}li.svelte-1midkwt.svelte-1midkwt:hover{cursor:pointer;box-shadow:0 0 0 0 rgba(255, 255, 255, 1);animation:svelte-1midkwt-grow-white 1.7s, svelte-1midkwt-pulse-white 1.7s infinite;animation-fill-mode:forwards;transform:scale(1)}@keyframes svelte-1midkwt-grow-white{40%{transform:scale(1.06)}100%{transform:scale(1.06)}}@keyframes svelte-1midkwt-pulse-white{0%{box-shadow:0 0 0 0 rgba(255, 255, 255, 0.7)}100%{box-shadow:0 0 0 10px rgba(255, 255, 255, 0)}}li.svelte-1midkwt.svelte-1midkwt:active{animation:svelte-1midkwt-strong-pulse-white 1s;animation-fill-mode:forwards}@keyframes svelte-1midkwt-strong-pulse-white{0%{transform:scale(1.06);box-shadow:0 0 0 10px rgba(255, 255, 255, 0.7)}100%{transform:scale(1.06);box-shadow:0 0 0 10px rgba(255, 255, 255, 0)}}",
+  code: ".title.svelte-gugf44.svelte-gugf44{margin-bottom:16px}.cell1.svelte-gugf44.svelte-gugf44{background-image:url(/photos/photo-charles-river-bw.jpeg);background-size:cover}.cell2.svelte-gugf44.svelte-gugf44{background-image:url(/photos/photo-charles-river-bw.jpeg);background-size:cover;background-position-x:-132px}.cell3.svelte-gugf44.svelte-gugf44{background-image:url(/photos/photo-charles-river-bw.jpeg);background-size:cover;background-position-x:-260px}.cell4.svelte-gugf44.svelte-gugf44{background-image:url(/photos/photo-charles-river-bw.jpeg);background-size:cover;background-position:right;background-position-x:142px}.things-to-do-container.svelte-gugf44.svelte-gugf44{margin-bottom:32px}.things-to-do-container.svelte-gugf44>.action.svelte-gugf44{position:relative;border:1px var(--primary-color) solid;max-width:108px;height:376px;padding:10px;margin-right:16px}.cell1.svelte-gugf44.svelte-gugf44::after,.cell2.svelte-gugf44.svelte-gugf44::after,.cell3.svelte-gugf44.svelte-gugf44::after,.cell4.svelte-gugf44.svelte-gugf44::after{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.5);z-index:2}.action.svelte-gugf44.svelte-gugf44:hover{cursor:pointer;box-shadow:0 0 0 0 rgba(255, 255, 255, 1);animation:svelte-gugf44-grow-white 1.7s, svelte-gugf44-pulse-white 1.7s infinite;animation-fill-mode:forwards;transform:scale(1)}@keyframes svelte-gugf44-grow-white{40%{transform:scale(1.06)}100%{transform:scale(1.06)}}@keyframes svelte-gugf44-pulse-white{0%{box-shadow:0 0 0 0 rgba(255, 255, 255, 0.7)}100%{box-shadow:0 0 0 10px rgba(255, 255, 255, 0)}}.action.svelte-gugf44.svelte-gugf44:active{animation:svelte-gugf44-strong-pulse-white 1s;animation-fill-mode:forwards}@keyframes svelte-gugf44-strong-pulse-white{0%{transform:scale(1.06);box-shadow:0 0 0 10px rgba(255, 255, 255, 0.7)}100%{transform:scale(1.06);box-shadow:0 0 0 10px rgba(255, 255, 255, 0)}}.featured-container.svelte-gugf44>.svelte-gugf44{border:1px var(--primary-color) solid;min-height:82px;padding:10px;width:380px;margin-bottom:16px}.text.svelte-gugf44.svelte-gugf44{color:var(--primary-color);z-index:3;position:relative;padding-left:10px;padding-right:10px;margin-top:10px;height:100%}a.svelte-gugf44.svelte-gugf44{text-decoration:none;color:var(--primary-color)}@media(max-width: 600px){.things-to-do-container.svelte-gugf44>.action.svelte-gugf44{width:78px;margin-right:10px}}@media(max-width: 460px){.things-to-do-container.svelte-gugf44>.action.svelte-gugf44{max-width:unset;height:unset;margin-bottom:10px}.text.svelte-gugf44.svelte-gugf44{padding:0;margin:auto}}",
   map: null
 };
-const FeatureCardGrid = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slots) => {
+const FeatureCardGrid = (0, import_index_ced29248.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<div class="${"container svelte-1midkwt"}"><div>What would you like to do?
-		<ul class="${"horizontal-stack svelte-1midkwt"}"><li class="${"left svelte-1midkwt"}"><a href="${"/blog"}" class="${"svelte-1midkwt"}"><div class="${"text svelte-1midkwt"}">Read Blog</div></a></li>
-			<li class="${"middle-left svelte-1midkwt"}"><a href="${"/events"}" class="${"svelte-1midkwt"}"><div class="${"text svelte-1midkwt"}">Find Events</div></a></li>
-			<li class="${"middle-right svelte-1midkwt"}"><a href="${"/polls"}" class="${"svelte-1midkwt"}"><div class="${"text svelte-1midkwt"}">Answer polls</div></a></li>
-			<li class="${"right svelte-1midkwt"}"><a href="${"/photos"}" class="${"svelte-1midkwt"}"><div class="${"text svelte-1midkwt"}">View photos</div></a></li></ul></div>
-	<div>Featured
-		<ul class="${"vertical-stack svelte-1midkwt"}">${(0, import_index_f6c97f68.b)([
+  return `<div class="${"container"}"><div class="${"row justify-content-center"}"><div class="${"col-lg"}"><div class="${"title svelte-gugf44"}">What would you like to do?</div>
+			<div class="${"row no-gutters things-to-do-container svelte-gugf44"}"><div class="${"col action cell1 svelte-gugf44"}"><a href="${"/blog"}" class="${"svelte-gugf44"}"><div class="${"text svelte-gugf44"}">Read Blog</div></a></div>
+                <div class="${"col action cell2 svelte-gugf44"}"><a href="${"/events"}" class="${"svelte-gugf44"}"><div class="${"text svelte-gugf44"}">Find Events</div></a></div>
+                <div class="${"col action cell3 svelte-gugf44"}"><a href="${"/polls"}" class="${"svelte-gugf44"}"><div class="${"text svelte-gugf44"}">Answer polls</div></a></div>
+                <div class="${"col action cell4 svelte-gugf44"}"><a href="${"/photos"}" class="${"svelte-gugf44"}"><div class="${"text svelte-gugf44"}">View photos</div></a></div></div></div>
+        <div class="${"col"}"><div class="${"title svelte-gugf44"}">Featured</div>
+            <div class="${"row no-gutters featured-container svelte-gugf44"}">${(0, import_index_ced29248.b)([
     "Latest Blog Post: Implementing Visitor Pattern in Rust",
     "Upcoming Event: Rust for Rustaceans Chapter 3 Discussion",
     "Poll: Recommend Software Engineering Book for Senior Devs?",
     'Latest Photo: "Downtown Boston Sunrise"'
   ], (text) => {
-    return `<li class="${"svelte-1midkwt"}">${(0, import_index_f6c97f68.e)(text)}</li>`;
-  })}</ul></div>
+    return `<div class="${"col-12 action svelte-gugf44"}">${(0, import_index_ced29248.e)(text)}</div>`;
+  })}</div></div></div>
 </div>`;
 });
 var index_svelte_svelte_type_style_lang = "";
@@ -55,10 +55,10 @@ const css = {
   map: null
 };
 const prerender = true;
-const Routes = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slots) => {
+const Routes = (0, import_index_ced29248.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `${$$result.head += `${$$result.title = `<title>Home</title>`, ""}`, ""}
+  return `${$$result.head += `${$$result.title = `<title>Home | rustbinaries.com</title>`, ""}`, ""}
 
-<section class="${"svelte-bc8okk"}">${(0, import_index_f6c97f68.v)(FeatureCardGrid, "FeatureCardGrid").$$render($$result, {}, {}, {})}
+<section class="${"svelte-bc8okk"}">${(0, import_index_ced29248.v)(FeatureCardGrid, "FeatureCardGrid").$$render($$result, {}, {}, {})}
 </section>`;
 });

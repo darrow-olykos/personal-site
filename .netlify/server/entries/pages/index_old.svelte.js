@@ -25,49 +25,8 @@ __export(exports, {
   default: () => Index_old,
   prerender: () => prerender
 });
-var import_index_f6c97f68 = __toModule(require("../../chunks/index-f6c97f68.js"));
-const subscriber_queue = [];
-function writable(value, start = import_index_f6c97f68.n) {
-  let stop;
-  const subscribers = new Set();
-  function set(new_value) {
-    if ((0, import_index_f6c97f68.d)(value, new_value)) {
-      value = new_value;
-      if (stop) {
-        const run_queue = !subscriber_queue.length;
-        for (const subscriber of subscribers) {
-          subscriber[1]();
-          subscriber_queue.push(subscriber, value);
-        }
-        if (run_queue) {
-          for (let i = 0; i < subscriber_queue.length; i += 2) {
-            subscriber_queue[i][0](subscriber_queue[i + 1]);
-          }
-          subscriber_queue.length = 0;
-        }
-      }
-    }
-  }
-  function update(fn) {
-    set(fn(value));
-  }
-  function subscribe2(run, invalidate = import_index_f6c97f68.n) {
-    const subscriber = [run, invalidate];
-    subscribers.add(subscriber);
-    if (subscribers.size === 1) {
-      stop = start(set) || import_index_f6c97f68.n;
-    }
-    run(value);
-    return () => {
-      subscribers.delete(subscriber);
-      if (subscribers.size === 0) {
-        stop();
-        stop = null;
-      }
-    };
-  }
-  return { set, update, subscribe: subscribe2 };
-}
+var import_index_ced29248 = __toModule(require("../../chunks/index-ced29248.js"));
+var import_index_4fca056e = __toModule(require("../../chunks/index-4fca056e.js"));
 function is_date(obj) {
   return Object.prototype.toString.call(obj) === "[object Date]";
 }
@@ -98,7 +57,7 @@ function tick_spring(ctx, last_value, current_value, target_value) {
   }
 }
 function spring(value, opts = {}) {
-  const store = writable(value);
+  const store = (0, import_index_4fca056e.w)(value);
   const { stiffness = 0.15, damping = 0.8, precision = 0.01 } = opts;
   let last_time;
   let task;
@@ -113,7 +72,7 @@ function spring(value, opts = {}) {
     const token = current_token = {};
     if (value == null || opts2.hard || spring2.stiffness >= 1 && spring2.damping >= 1) {
       cancel_task = true;
-      last_time = (0, import_index_f6c97f68.f)();
+      last_time = (0, import_index_ced29248.n)();
       last_value = new_value;
       store.set(value = target_value);
       return Promise.resolve();
@@ -123,9 +82,9 @@ function spring(value, opts = {}) {
       inv_mass = 0;
     }
     if (!task) {
-      last_time = (0, import_index_f6c97f68.f)();
+      last_time = (0, import_index_ced29248.n)();
       cancel_task = false;
-      task = (0, import_index_f6c97f68.l)((now2) => {
+      task = (0, import_index_ced29248.l)((now2) => {
         if (cancel_task) {
           cancel_task = false;
           task = null;
@@ -173,12 +132,12 @@ const css$1 = {
 function modulo(n, m) {
   return (n % m + m) % m;
 }
-const Counter = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slots) => {
+const Counter = (0, import_index_ced29248.c)(($$result, $$props, $$bindings, slots) => {
   let offset;
   let $displayed_count, $$unsubscribe_displayed_count;
   let count = 0;
   const displayed_count = spring();
-  $$unsubscribe_displayed_count = (0, import_index_f6c97f68.a)(displayed_count, (value) => $displayed_count = value);
+  $$unsubscribe_displayed_count = (0, import_index_ced29248.a)(displayed_count, (value) => $displayed_count = value);
   $$result.css.add(css$1);
   {
     displayed_count.set(count);
@@ -187,8 +146,8 @@ const Counter = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slo
   $$unsubscribe_displayed_count();
   return `<div class="${"counter svelte-ppn7h8"}"><button aria-label="${"Decrease the counter by one"}" class="${"svelte-ppn7h8"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-ppn7h8"}"><path d="${"M0,0.5 L1,0.5"}" class="${"svelte-ppn7h8"}"></path></svg></button>
 
-	<div class="${"counter-viewport svelte-ppn7h8"}"><div class="${"counter-digits svelte-ppn7h8"}" style="${"transform: translate(0, " + (0, import_index_f6c97f68.e)(100 * offset) + "%)"}"><strong class="${"hidden svelte-ppn7h8"}" aria-hidden="${"true"}">${(0, import_index_f6c97f68.e)(Math.floor($displayed_count + 1))}</strong>
-			<strong class="${"svelte-ppn7h8"}">${(0, import_index_f6c97f68.e)(Math.floor($displayed_count))}</strong></div></div>
+	<div class="${"counter-viewport svelte-ppn7h8"}"><div class="${"counter-digits svelte-ppn7h8"}" style="${"transform: translate(0, " + (0, import_index_ced29248.e)(100 * offset) + "%)"}"><strong class="${"hidden svelte-ppn7h8"}" aria-hidden="${"true"}">${(0, import_index_ced29248.e)(Math.floor($displayed_count + 1))}</strong>
+			<strong class="${"svelte-ppn7h8"}">${(0, import_index_ced29248.e)(Math.floor($displayed_count))}</strong></div></div>
 
 	<button aria-label="${"Increase the counter by one"}" class="${"svelte-ppn7h8"}"><svg aria-hidden="${"true"}" viewBox="${"0 0 1 1"}" class="${"svelte-ppn7h8"}"><path d="${"M0,0.5 L1,0.5 M0.5,0 L0.5,1"}" class="${"svelte-ppn7h8"}"></path></svg></button>
 </div>`;
@@ -199,7 +158,7 @@ const css = {
   map: null
 };
 const prerender = true;
-const Index_old = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, slots) => {
+const Index_old = (0, import_index_ced29248.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `${$$result.title = `<title>Home</title>`, ""}`, ""}
 
@@ -211,6 +170,6 @@ const Index_old = (0, import_index_f6c97f68.c)(($$result, $$props, $$bindings, s
 
 	<h2>try editing <strong>src/routes/index.svelte</strong></h2>
 
-	${(0, import_index_f6c97f68.v)(Counter, "Counter").$$render($$result, {}, {}, {})}
+	${(0, import_index_ced29248.v)(Counter, "Counter").$$render($$result, {}, {}, {})}
 </section>`;
 });
