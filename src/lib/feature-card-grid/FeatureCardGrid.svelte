@@ -1,10 +1,10 @@
 <script lang="ts">
 </script>
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="col-lg">
-			<div class="title">What would you like to do?</div>
+            <div class="title">What would you like to do?</div>
 			<div class="row things-to-do-container">
 				<div class="col action cell1">
 					<a href="/blog">
@@ -40,13 +40,9 @@
 </div>
 
 <style>
-	.container3 {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
 	.title {
 		margin-bottom: 16px;
+        margin-left: -16px;
 	}
 
 	/* TODO: is there a less brittle way to accomplish this effect? */
