@@ -19,6 +19,7 @@
 			datetimeInMs={new Date(2022, 1, 10, 19, 0, 0).getTime()}
 			thumbnailUrl="/photos/photo-rust-ferris.jpeg"
 			thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
+			recurs="biweekly"
 		/>
 	</div>
 
@@ -27,16 +28,18 @@
 		<EventCard
 			groupName="Rust DC"
 			name="Book Club: Rust for Rustaceans"
-			datetimeInMs={new Date(2022, 1, 10, 19, 0, 0).getTime()}
+			datetimeInMs={new Date(2022, 1, 24, 19, 0, 0).getTime()}
 			thumbnailUrl="/photos/photo-rust-ferris.jpeg"
 			thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
+			recurs="biweekly"
 		/>
 		<EventCard
 			groupName="Rust DC"
 			name="Book Club: Rust for Rustaceans"
-			datetimeInMs={new Date(2022, 1, 10, 19, 0, 0).getTime()}
+			datetimeInMs={new Date(2022, 2, 3, 19, 0, 0).getTime()}
 			thumbnailUrl="/photos/photo-rust-ferris.jpeg"
 			thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
+			recurs="biweekly"
 		/>
 	</div>
 </section>

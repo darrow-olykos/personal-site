@@ -9,6 +9,8 @@
     export let thumbnailAlt: string;
     export let datetimeInMs: number;
 
+    export let recurs: undefined | 'weekly' | 'biweekly';
+
     // behavior
     const UPDATE_FREQUENCY_IN_MS = 1000;
 	let todayInMs = Date.now();
@@ -45,6 +47,13 @@
                 src={thumbnailUrl}
                 alt={thumbnailAlt}
             />
+            <div class="event__recurrence">
+                {#if recurs}
+                    Recurs {recurs}
+                {:else}
+                    No recurrence
+                {/if}
+            </div>
         </div>
         <div class="event__share-button">
             <Icon icon={shareFill} />
@@ -100,6 +109,10 @@
 		object-fit: cover;
 		object-position: 100% -15px;
 	}
+
+    .event__recurrence {
+        margin-left: auto;
+    }
 
 	.event__share-button {
 		float: right;
