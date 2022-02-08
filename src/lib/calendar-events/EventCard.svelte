@@ -46,7 +46,7 @@
 				Starts in {daysUntilEvent} days
 			</div>
             <div class="col-12">
-				<a href="">see event details</a>
+				<a href={data.permaLink}>see event details</a>
 			</div>
 			<div class="col-12">
 				<div class="event__share-button">
