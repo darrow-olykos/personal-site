@@ -42,7 +42,7 @@
 	</div>
 	<div class="col-xs-12 text-center event__notice">
 		<div class="row">
-			<div class="col-12">
+			<div class="col-12 event__time-until">
 				Starts in {daysUntilEvent} days
 			</div>
             <div class="col-12">
@@ -87,22 +87,12 @@
 		white-space: nowrap;
 	}
 
+    .event__time-until {
+        padding-top: 3px;
+    }
+
 	.event__name {
 		font-family: 'Inconsolata-expanded-bold';
-	}
-
-	.event__thumbnail {
-		height: 80px;
-		width: 80px;
-		object-fit: cover;
-		object-position: 100% -10px;
-		border-radius: 10%;
-	}
-
-	@media (max-width: 330px) {
-		.event__thumbnail {
-			width: 40px;
-		}
 	}
 
 	.event__share-button :global(svg) {
