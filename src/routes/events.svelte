@@ -22,6 +22,7 @@
 					thumbnailUrl="/photos/photo-rust-ferris.jpeg"
 					thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
 					recurs="biweekly"
+                    permaLink="1"
 				/>
 			</div>
 			<div class="col-12">
@@ -33,6 +34,7 @@
 					thumbnailUrl="/photos/photo-rust-ferris.jpeg"
 					thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
 					recurs="biweekly"
+                    permaLink="2"
 				/>
 				<EventCard
 					groupName="Rust DC"
@@ -41,6 +43,7 @@
 					thumbnailUrl="/photos/photo-rust-ferris.jpeg"
 					thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
 					recurs="biweekly"
+                    permaLink="3"
 				/>
 				<EventCard
 					groupName="Mock Group"
@@ -48,6 +51,7 @@
 					datetimeInMs={new Date(2022, 3, 3, 19, 0, 0).getTime()}
 					thumbnailUrl="/photos/photo-rust-ferris.jpeg"
 					thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
+                    permaLink="4"
 				/>
 			</div>
 		</div>

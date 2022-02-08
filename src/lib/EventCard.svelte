@@ -11,6 +11,7 @@
 	export let thumbnailAlt: string;
 	export let datetimeInMs: number;
 	export let recurs: 'weekly' | 'biweekly' = undefined;
+    export let permaLink: string;
 
 	// behavior
 	function formatDatetimeFromMs(ms: number) {
