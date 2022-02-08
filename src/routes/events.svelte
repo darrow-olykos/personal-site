@@ -3,7 +3,45 @@
 </script>
 
 <script lang="ts">
-	import EventCard from '$lib/EventCard.svelte';
+	import type { CalendarEvent } from '$lib/calendar-events/calendar-event';
+	import EventCard from '$lib/calendar-events/EventCard.svelte';
+
+	let data: Array<CalendarEvent> = [
+		{
+			permaLink: '/events/1',
+			group: {
+                name: 'Rust DC',
+                image: {
+                    url: "/photos/rust-dc-meetup-logo.jpeg",
+                    alt: "rust logo photoshopped onto whitehouse"
+                },
+            },
+			name: 'Book Club: Rust for Rustaceans',
+			datetimeInMs: new Date(2022, 1, 10, 19, 0, 0).getTime(),
+			image: {
+				url: '/photos/photo-rust-ferris.jpeg',
+				alt: 'ferris, the crab mascot of rust, painted with water-color'
+			},
+			recurrence: 'biweekly'
+		},
+		{
+			permaLink: '/events/2',
+            group: {
+                name: 'Rust DC',
+                image: {
+                    url: "/photos/rust-dc-meetup-logo.jpeg",
+                    alt: "rust logo photoshopped onto whitehouse"
+                },
+            },
+			name: 'Mock event name',
+			datetimeInMs: new Date(2022, 2, 11, 20, 0, 0).getTime(),
+			image: {
+				url: '/photos/photo-plant-french-press.jpeg',
+				alt: 'a plant and a french press on my desk'
+			},
+            recurrence: 'none'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -11,55 +49,19 @@
 </svelte:head>
 
 <section>
-	<div class="container-fluid">
-		<div class="row justify-content-center">
-			<div class="col-12">
-				<h3 class="event-list__header">Next Event</h3>
-				<EventCard
-					groupName="Rust DC"
-					name="Book Club: Rust for Rustaceans"
-					datetimeInMs={new Date(2022, 1, 10, 19, 0, 0).getTime()}
-					thumbnailUrl="/photos/photo-rust-ferris.jpeg"
-					thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
-					recurs="biweekly"
-                    permaLink="1"
-				/>
-			</div>
-			<div class="col-12">
-				<h3 class="event-list__header">Upcoming Events</h3>
-				<EventCard
-					groupName="Rust DC"
-					name="Book Club: Rust for Rustaceans"
-					datetimeInMs={new Date(2022, 1, 24, 19, 0, 0).getTime()}
-					thumbnailUrl="/photos/photo-rust-ferris.jpeg"
-					thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
-					recurs="biweekly"
-                    permaLink="2"
-				/>
-				<EventCard
-					groupName="Rust DC"
-					name="Book Club: Rust for Rustaceans"
-					datetimeInMs={new Date(2022, 2, 3, 19, 0, 0).getTime()}
-					thumbnailUrl="/photos/photo-rust-ferris.jpeg"
-					thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
-					recurs="biweekly"
-                    permaLink="3"
-				/>
-				<EventCard
-					groupName="Mock Group"
-					name="Mock event name"
-					datetimeInMs={new Date(2022, 3, 3, 19, 0, 0).getTime()}
-					thumbnailUrl="/photos/photo-rust-ferris.jpeg"
-					thumbnailAlt="ferris, the crab mascot of rust, painted with water-color"
-                    permaLink="4"
-				/>
-			</div>
-		</div>
-	</div>
+    {#each data as event}
+	    <div class="container">
+            <EventCard data={event} />
+        </div>
+    {/each}
 </section>
 
 <style>
 	section {
 		margin-top: 49px;
 	}
+
+    .container {
+        margin-bottom: 16px;
+    }
 </style>
