@@ -1,4 +1,7 @@
-type Recurrence = 'none' | 'weekly' | 'biweekly';
+type Recurrence = {
+    pattern: 'none' | 'weekly' | 'biweekly',
+    anEarlierInstanceExists: boolean
+};
 
 type Image = {
     url: string,
@@ -16,5 +19,5 @@ export type CalendarEvent = {
     datetimeInMs: number,
     image: Image,
     recurrence: Recurrence,
-    group: Group
+    group: Group,
 }

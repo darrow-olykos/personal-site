@@ -7,6 +7,8 @@
 	// props
 	export let data: CalendarEvent;
 
+	const URL = `events/${data.id}`;
+
 	// behavior
 	function formatDatetimeFromMs(ms: number) {
 		return new Date(ms).toLocaleDateString(undefined, {
@@ -22,49 +24,68 @@
 	$: formattedDatetime = formatDatetimeFromMs(data.datetimeInMs);
 </script>
 
-<div class="row justify-content-center justify-content-sm-start align-items-center event__details">
-	<div class="col-xs-12 col-sm-8 text-center">
-		<div class="row no-gutters">
-			<div class="col-xs-12 col-sm-6">
-				<img width="100px" height="100px" src={data.image.url} alt={data.image.alt} />
+{#if !data.recurrence.anEarlierInstanceExists}
+	<div
+		class="row justify-content-center justify-content-sm-start align-items-center event__details"
+	>
+		<div class="col-xs-12 col-sm-8 text-center text-sm-left">
+			<div class="row align-items-center">
+				<div class="col-xs-12 col-sm-auto">
+                    <div class="event__image-container">
+                        <img width="100px" height="100px" src={data.image.url} alt={data.image.alt} />
+                    </div>
+				</div>
+				<div class="col-xs-12 col-sm-7 text-center text-sm-left">
+					<div class="row event__info">
+						<div class="col-12 event__name">
+							{data.name}
+						</div>
+						<div class="col-12 event__group">
+							{data.group.name}
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col event__datetime">
+									{formattedDatetime}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-            <div class="col-xs-12 col-sm-6 text-center text-sm-left">
-                <div class="row event__info">
-                    <div class="col-12 event__name">
-                        {data.name}
-                    </div>
-                    <div class="col-12 event__group">
-                        {data.group.name}
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <div class="col event__datetime">
-                                {formattedDatetime}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 		</div>
-	</div>
-	<div class="col-xs-12 col-sm-3 text-center event__notice">
-		<div class="row">
-			<div class="col-12 event__time-until">
-				Starts in {daysUntilEvent} days
-			</div>
-			<div class="col-12">
-				<a href={`events/${data.id}`}>see event details</a>
-			</div>
-			<div class="col-12">
-				<div class="event__share-button">
-					<Icon icon={shareFill} />
+		<div class="col-xs-12 col-sm-3 text-center event__notice">
+			<div class="row">
+				<div class="col-12 event__time-until">
+					Starts in {daysUntilEvent} days
+				</div>
+				<div class="col-12">
+					<a href={URL}>see event details</a>
+				</div>
+				<div class="col-12">
+					<div class="event__share-button">
+						<!-- TODO: impl copy URL to clipboard feature -->
+						<Icon icon={shareFill} />
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+{:else}
+	<div class="row align-items-center event__details">
+		<div class="col">
+			<img height="40px" width="40px" src={data.image.url} alt={data.image.alt} />
+		</div>
+	</div>
+{/if}
 
 <style>
+    /* while making img's display: block would work just as well, I'd no longer be able to mess w/ inline alignment (via the text- utiltiy classes)
+       so, setting image container height to image height works just as well */
+	.event__image-container {
+        height: 100px;
+    }
+
 	.event__name {
 		font-weight: 700;
 	}

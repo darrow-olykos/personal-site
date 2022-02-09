@@ -23,7 +23,10 @@
 				url: '/photos/photo-rust-ferris.jpeg',
 				alt: 'ferris, the crab mascot of rust, painted with water-color'
 			},
-			recurrence: 'biweekly'
+			recurrence: {
+				pattern: 'biweekly',
+				anEarlierInstanceExists: false
+			}
 		},
 		{
 			id: '2',
@@ -40,7 +43,10 @@
 				url: '/photos/photo-plant-french-press.jpeg',
 				alt: 'a plant and a french press on my desk'
 			},
-			recurrence: 'weekly'
+			recurrence: {
+				pattern: 'weekly',
+				anEarlierInstanceExists: false
+			}
 		}
 	];
 
