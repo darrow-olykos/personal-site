@@ -22,30 +22,37 @@
 	$: formattedDatetime = formatDatetimeFromMs(data.datetimeInMs);
 </script>
 
-<div class="row justify-content-center align-items-center event__details">
-	<div class="col text-center">
-		<div class="row event__info">
-			<div class="col-12 event__name">
-				{data.name}
+<div class="row justify-content-center justify-content-sm-start align-items-center event__details">
+	<div class="col-xs-12 col-sm-8 text-center">
+		<div class="row no-gutters">
+			<div class="col-xs-12 col-sm-6">
+				<img width="100px" height="100px" src={data.image.url} alt={data.image.alt} />
 			</div>
-			<div class="col-12 event__group">
-				{data.group.name}
-			</div>
-			<div class="col">
-				<div class="row">
-					<div class="col event__datetime">
-						{formattedDatetime}
-					</div>
-				</div>
-			</div>
+            <div class="col-xs-12 col-sm-6 text-center text-sm-left">
+                <div class="row event__info">
+                    <div class="col-12 event__name">
+                        {data.name}
+                    </div>
+                    <div class="col-12 event__group">
+                        {data.group.name}
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col event__datetime">
+                                {formattedDatetime}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</div>
 	</div>
-	<div class="col-xs-12 text-center event__notice">
+	<div class="col-xs-12 col-sm-3 text-center event__notice">
 		<div class="row">
 			<div class="col-12 event__time-until">
 				Starts in {daysUntilEvent} days
 			</div>
-            <div class="col-12">
+			<div class="col-12">
 				<a href={`events/${data.id}`}>see event details</a>
 			</div>
 			<div class="col-12">
@@ -78,8 +85,7 @@
 
 	.event__notice {
 		height: 100%;
-        max-width: 300px;
-        margin: 0 16px;
+		max-width: 300px;
 		font-weight: 800;
 		border-radius: 10px;
 		background-color: var(--primary-color);
@@ -87,9 +93,9 @@
 		white-space: nowrap;
 	}
 
-    .event__time-until {
-        padding-top: 3px;
-    }
+	.event__time-until {
+		padding-top: 3px;
+	}
 
 	.event__name {
 		font-family: 'Inconsolata-expanded-bold';
