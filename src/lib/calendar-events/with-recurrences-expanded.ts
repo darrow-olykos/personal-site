@@ -4,13 +4,13 @@ import type { CalendarEvent } from "./calendar-event";
  * withRecurrencesExpanded adds events to a CalendarEvent list for purpose of rendering a list of event instances
  *    only adds up to MAX_NUM_EVENTS events, and will make TIMES_TO_EXPAND additions for an event with a recurrence
  *    sorts resulting list before returning
- *    NOTE: this 
+ *    Note: This is good for weekly and biweekly recurrences, and not good for data that is more granular than that
  * @param events a CalendarEvent list
  * @returns a CalendarEvent list with up to MAX_NUM_EVENTS injected, based on event recurrence values
  */
 export function withRecurrencesExpanded(events: Array<CalendarEvent>) {
-    const MAX_NUM_EVENTS = 30;
-    const TIMES_TO_EXPAND = 5;
+    const MAX_NUM_EVENTS = 50;
+    const TIMES_TO_EXPAND = 10;
     let timesExpanded = 0;
     let expandedEvents: Array<CalendarEvent> = [];
 
