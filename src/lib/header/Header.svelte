@@ -8,6 +8,18 @@
 			<li class:active={$page.url.pathname === '/'}>
 				<a sveltekit:prefetch href="/">Home</a>
 			</li>
+            <li class:active={$page.url.pathname === '/blog'}>
+				<a sveltekit:prefetch href="/blog">Blog</a>
+			</li>
+            <li class:active={$page.url.pathname === '/events'}>
+				<a sveltekit:prefetch href="/events">Events</a>
+			</li>
+            <li class:active={$page.url.pathname === '/polls'}>
+				<a sveltekit:prefetch href="/polls">Events</a>
+			</li>
+            <li class:active={$page.url.pathname === '/photos'}>
+				<a sveltekit:prefetch href="/photos">Photos</a>
+			</li>
 		</ul>
 	</nav>
 	<div class="corner" />

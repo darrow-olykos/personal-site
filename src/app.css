@@ -44,6 +44,7 @@ body {
 
 /* scale font from 12px to 16px for viewport widths 320px to 1000px */
 html {
+    overflow-y: scroll;
     font-size: 12px;
   }
   @media screen and (min-width: 320px) {
