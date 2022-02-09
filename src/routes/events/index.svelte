@@ -9,7 +9,7 @@
 
 	let data: Array<CalendarEvent> = [
 		{
-			permaLink: '/events/1',
+			id: '1',
 			group: {
 				name: 'Rust DC',
 				image: {
@@ -26,7 +26,7 @@
 			recurrence: 'biweekly'
 		},
 		{
-			permaLink: '/events/2',
+			id: '2',
 			group: {
 				name: 'Designing Data-Intensive Applications Book Club',
 				image: {

@@ -11,7 +11,7 @@ type Group = {
 }
 
 export type CalendarEvent = {
-    permaLink: string,
+    id: string,
     name: string,
     datetimeInMs: number,
     image: Image,
