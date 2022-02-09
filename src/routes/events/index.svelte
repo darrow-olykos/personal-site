@@ -47,6 +47,26 @@
 				pattern: 'weekly',
 				anEarlierInstanceExists: false
 			}
+		},
+        {
+			id: '3',
+			group: {
+				name: 'Mock Group',
+				image: {
+					url: '/photos/photo-city-buildings.jpeg',
+					alt: 'buildings'
+				}
+			},
+			name: 'Mock Future Event',
+			datetimeInMs: new Date(2022, 1, 26, 20, 0, 0).getTime(),
+            image: {
+					url: '/photos/photo-city-buildings.jpeg',
+					alt: 'buildings'
+            },
+			recurrence: {
+				pattern: 'none',
+				anEarlierInstanceExists: false
+			}
 		}
 	];
 
