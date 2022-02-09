@@ -10,7 +10,6 @@ export function withRecurrencesExpanded(events: Array<CalendarEvent>) {
         expandedEvents.push(event);
         if (event.recurrence !== 'none') {
             let weeksToAdd;
-            const ONE_WEEK_IN_MS = 1000 * 60 * 60 * 24 * 7;
             if (event.recurrence === 'biweekly') {
                 weeksToAdd = 2;
             } else if (event.recurrence === 'weekly') {
@@ -20,6 +19,7 @@ export function withRecurrencesExpanded(events: Array<CalendarEvent>) {
             }
             for (let expandCount = 1; expandCount <= TIMES_TO_EXPAND; expandCount++) {
                 const eventCopy = Object.assign({}, event);
+                const ONE_WEEK_IN_MS = 1000 * 60 * 60 * 24 * 7;
                 eventCopy.datetimeInMs = event.datetimeInMs + ONE_WEEK_IN_MS * weeksToAdd * expandCount;
                 expandedEvents.push(eventCopy);
             }
