@@ -31,9 +31,9 @@
 		<div class="col-xs-12 col-sm-8 text-center text-sm-left">
 			<div class="row align-items-center">
 				<div class="col-xs-12 col-sm-auto">
-                    <div class="event__image-container">
-                        <img width="100px" height="100px" src={data.image.url} alt={data.image.alt} />
-                    </div>
+					<div class="event__image-container">
+						<img width="100px" height="100px" src={data.image.url} alt={data.image.alt} />
+					</div>
 				</div>
 				<div class="col-xs-12 col-sm-7 text-center text-sm-left">
 					<div class="row event__info">
@@ -72,19 +72,38 @@
 		</div>
 	</div>
 {:else}
-	<div class="row align-items-center event__details">
-		<div class="col">
+	<div class="row justify-content-center justify-content-sm-start align-items-center text-center event__details">
+		<div class="col-auto event__image-container--small">
 			<img height="40px" width="40px" src={data.image.url} alt={data.image.alt} />
+		</div>
+		<div class="col-sm-auto">
+			<div class="row">
+				<div class="col-sm-auto">(recurrence) {data.name}</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-auto event__group">{data.group.name}</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-auto">
+					<div class="event__datetime">
+						{formattedDatetime}
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 {/if}
 
 <style>
-    /* while making img's display: block would work just as well, I'd no longer be able to mess w/ inline alignment (via the text- utiltiy classes)
+	/* while making img's display: block would work just as well, I'd no longer be able to mess w/ inline alignment (via the text- utiltiy classes)
        so, setting image container height to image height works just as well */
 	.event__image-container {
-        height: 100px;
-    }
+		height: 100px;
+	}
+
+	.event__image-container--small {
+		height: 40px;
+	}
 
 	.event__name {
 		font-weight: 700;
@@ -105,8 +124,10 @@
 	}
 
 	.event__notice {
+		display: inline-block;
+		padding: 12px;
 		height: 100%;
-		max-width: 300px;
+		max-width: 172px;
 		font-weight: 800;
 		border-radius: 10px;
 		background-color: var(--primary-color);
