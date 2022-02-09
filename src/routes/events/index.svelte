@@ -1,50 +1,50 @@
 <script context="module" lang="ts">
-	export const prerender = true;
+export const prerender = true;
 </script>
 
 <script lang="ts">
-	import type { CalendarEvent } from '$lib/calendar-events/calendar-event';
-	import EventCard from '$lib/calendar-events/EventCard.svelte';
-	import { withRecurrencesExpanded } from '$lib/calendar-events/with-recurrences-expanded';
+import type { CalendarEvent } from '$lib/calendar-events/calendar-event';
+import EventCard from '$lib/calendar-events/EventCard.svelte';
+import { withRecurrencesExpanded } from '$lib/calendar-events/with-recurrences-expanded';
 
-	let data: Array<CalendarEvent> = [
-		{
-			permaLink: '/events/1',
-			group: {
-				name: 'Rust DC',
-				image: {
-					url: '/photos/rust-dc-meetup-logo.jpeg',
-					alt: 'rust logo photoshopped onto whitehouse'
-				}
-			},
-			name: 'Rust for Rustaceans Chapter Discussion',
-			datetimeInMs: new Date(2022, 1, 10, 19, 0, 0).getTime(),
-			image: {
-				url: '/photos/photo-rust-ferris.jpeg',
-				alt: 'ferris, the crab mascot of rust, painted with water-color'
-			},
-			recurrence: 'biweekly'
-		},
-		{
-			permaLink: '/events/2',
-			group: {
-				name: 'Designing Data-Intensive Applications Book Club',
-				image: {
-					url: '/photos/rust-dc-meetup-logo.jpeg',
-					alt: 'rust logo photoshopped onto whitehouse'
-				}
-			},
-			name: 'DDIA Chapter Discussion',
-			datetimeInMs: new Date(2022, 2, 11, 20, 0, 0).getTime(),
-			image: {
-				url: '/photos/photo-plant-french-press.jpeg',
-				alt: 'a plant and a french press on my desk'
-			},
-			recurrence: 'weekly'
-		}
-	];
+let data: Array<CalendarEvent> = [
+    {
+        permaLink: '/events/1',
+        group: {
+            name: 'Rust DC',
+            image: {
+                url: '/photos/rust-dc-meetup-logo.jpeg',
+                alt: 'rust logo photoshopped onto whitehouse'
+            }
+        },
+        name: 'Rust for Rustaceans Chapter Discussion',
+        datetimeInMs: new Date(2022, 1, 10, 19, 0, 0).getTime(),
+        image: {
+            url: '/photos/photo-rust-ferris.jpeg',
+            alt: 'ferris, the crab mascot of rust, painted with water-color'
+        },
+        recurrence: 'biweekly'
+    },
+    {
+        permaLink: '/events/2',
+        group: {
+            name: 'Designing Data-Intensive Applications Book Club',
+            image: {
+                url: '/photos/rust-dc-meetup-logo.jpeg',
+                alt: 'rust logo photoshopped onto whitehouse'
+            }
+        },
+        name: 'DDIA Chapter Discussion',
+        datetimeInMs: new Date(2022, 1, 11, 20, 0, 0).getTime(),
+        image: {
+            url: '/photos/photo-plant-french-press.jpeg',
+            alt: 'a plant and a french press on my desk'
+        },
+        recurrence: 'weekly'
+    }
+];
 
-	let events = withRecurrencesExpanded(data);
+let events = withRecurrencesExpanded(data);
 </script>
 
 <svelte:head>

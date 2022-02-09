@@ -29,7 +29,7 @@ export function withRecurrencesExpanded(events: Array<CalendarEvent>) {
             for (let expandCount = 1; expandCount <= TIMES_TO_EXPAND; expandCount++) {
                 const eventCopy = Object.assign({}, event);
                 const ONE_WEEK_IN_MS = 1000 * 60 * 60 * 24 * 7;
-                eventCopy.datetimeInMs = event.datetimeInMs + ONE_WEEK_IN_MS * weeksToAdd * expandCount;
+                eventCopy.datetimeInMs = event.datetimeInMs + (ONE_WEEK_IN_MS * weeksToAdd) * expandCount;
                 expandedEvents.push(eventCopy);
                 timesExpanded++;
             }
