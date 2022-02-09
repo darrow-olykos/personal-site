@@ -2,17 +2,19 @@ import type { CalendarEvent } from "./calendar-event";
 
 /**
  * withRecurrencesExpanded adds events to a CalendarEvent list for purpose of rendering a list of event instances
- *    only adds up to 20 events, and will make 10 additions for an event with a recurrence
- *    DOES NOT sort events, sorting must be handled by consumer
+ *    only adds up to MAX_NUM_EVENTS events, and will make TIMES_TO_EXPAND additions for an event with a recurrence
+ *    sorts resulting list before returning
+ *    NOTE: this 
  * @param events a CalendarEvent list
  * @returns a CalendarEvent list with up to MAX_NUM_EVENTS injected, based on event recurrence values
  */
 export function withRecurrencesExpanded(events: Array<CalendarEvent>) {
-    const MAX_NUM_EVENTS = 20;
-    const TIMES_TO_EXPAND = 10;
+    const MAX_NUM_EVENTS = 30;
+    const TIMES_TO_EXPAND = 5;
+    let timesExpanded = 0;
     let expandedEvents: Array<CalendarEvent> = [];
 
-    for (let i = 0; i < events.length && expandedEvents.length < MAX_NUM_EVENTS; i++) {
+    for (let i = 0; i < events.length && timesExpanded < MAX_NUM_EVENTS; i++) {
         let event = events[i];
         expandedEvents.push(event);
         if (event.recurrence !== 'none') {
@@ -29,9 +31,10 @@ export function withRecurrencesExpanded(events: Array<CalendarEvent>) {
                 const ONE_WEEK_IN_MS = 1000 * 60 * 60 * 24 * 7;
                 eventCopy.datetimeInMs = event.datetimeInMs + ONE_WEEK_IN_MS * weeksToAdd * expandCount;
                 expandedEvents.push(eventCopy);
+                timesExpanded++;
             }
         }
     }
-
+    expandedEvents.sort((event1, event2) => event1.datetimeInMs - event2.datetimeInMs);
     return expandedEvents;
 }

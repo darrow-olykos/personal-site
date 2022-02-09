@@ -45,6 +45,7 @@ let data: Array<CalendarEvent> = [
 ];
 
 let events = withRecurrencesExpanded(data);
+events.sort((event1, event2) => event1.datetimeInMs - event2.datetimeInMs);
 
 </script>
 
