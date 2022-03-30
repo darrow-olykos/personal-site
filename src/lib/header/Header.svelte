@@ -1,13 +1,26 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+
+	const links = [
+		/*{
+			text: 'Home',
+			path: '/'
+		},*/
+		{
+			text: 'Resume',
+			path: '/resume'
+		},
+	];
 </script>
 
 <header>
 	<nav>
 		<ul>
-			<li class:active={$page.url.pathname === '/'}>
-				<a sveltekit:prefetch href="/">Home</a>
-			</li>
+			{#each links as link}
+				<li class:active={$page.url.pathname === link.path}>
+					<a sveltekit:prefetch href={link.path}>{link.text}</a>
+				</li>
+			{/each}
 		</ul>
 	</nav>
 	<div class="corner" />
