@@ -10,7 +10,7 @@
 </main>
 
 <footer>
-	Site designed and implemented by <a href="https://linkedin.com/in/chrisdillinger">Chris Dillinger</a>
+	Site created by <a href="https://linkedin.com/in/chrisdillinger">Chris Dillinger</a>
 </footer>
 
 <style>

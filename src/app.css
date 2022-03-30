@@ -41,3 +41,20 @@ body {
     background-color: var(--tertiary-color);
     color: var(--text-color);
 }
+
+/* scale font from 12px to 16px for viewport widths 320px to 1000px */
+html {
+    overflow-y: scroll;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 320px) {
+    html {
+      font-size: calc(12px + 4 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
