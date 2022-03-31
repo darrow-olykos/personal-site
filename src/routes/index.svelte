@@ -42,13 +42,13 @@
 	<pre>I am a</pre>
 	<ul>
 		<li>Penn State Alum (We Are!)</li>
-		<li>gamer</li>
-		<li>nerd</li>
-		<li>developer</li>
-		<li>brother & son (my family means the world to me)</li>
-		<li>(casual) snowboarder</li>
-		<li>(casual) musician (guitar, piano)</li>
-		<li>citizen of the city-state that is our universe</li>
+		<li>Gamer</li>
+		<li>Nerd</li>
+		<li>Developer</li>
+		<li>Brother & son (my family means the world to me)</li>
+		<li>(casual) Snowboarder</li>
+		<li>(casual) Musician (guitar, piano)</li>
+		<li>Citizen of the city-state that is our universe</li>
 	</ul>
 
 	<pre>Stuff I like:</pre>
@@ -66,8 +66,8 @@
 			<li>Valorant</li>
 		</ul>
 		<li>
-			Learning what others are interested in (...like, a LOT. Tell me something you're passionate
-			or curious about... Please...)
+			Learning what others are interested in (...like, a LOT. Tell me something you're passionate or
+			curious about... Please...)
 		</li>
 		<li>
 			Binge watching shows on streaming services, some of my favorites, in no particular order:
@@ -113,14 +113,14 @@
 	<img
 		width="300px"
 		src="photos/friend-pizza-boston.jpeg"
-		alt="in boston with good friend after eating good pizza"
+		alt="in boston with girlfriend after eating good pizza"
 	/>
 	<img
 		width="300px"
 		src="photos/fishing-with-dad.jpeg"
 		alt="my dad and I on our way to go fishing"
 	/>
-	<img width="300px" src="photos/first-trip-boston.jpeg" alt="me and good friend" />
+	<img width="300px" src="photos/first-trip-boston.jpeg" alt="me and girlfriend" />
 </div>
 
 <style>
