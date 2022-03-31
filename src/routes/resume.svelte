@@ -4,10 +4,10 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
-	let structuredClone;
 	let PdfViewer;
 
 	onMount(async () => {
+		// polyfill structuredClone which does not exist on safari
 		const structuredCloneModule = await import('@ungap/structured-clone');
 		window.structuredClone = structuredCloneModule.default;
 		const module = await import('svelte-pdf');
@@ -23,9 +23,8 @@
 </svelte:head>
 
 <section>
-	Click <a href={RESUME_PATH} download={RESUME_FILE_NAME}>here</a> to download resume.
 	<svelte:component this={PdfViewer} url={RESUME_PATH} />
-	(The PDF Renderer I'm using does not render in mobile browser)
+	Click <a href={RESUME_PATH} download={RESUME_FILE_NAME}>here</a> to download.
 </section>
 
 <style>
