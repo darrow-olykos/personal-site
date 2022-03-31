@@ -47,7 +47,6 @@
 		<li>Developer</li>
 		<li>Brother & son (my family means the world to me)</li>
 		<li>(casual) Musician (guitar, piano)</li>
-		<li>Citizen of the city-state that is our universe</li>
 	</ul>
 
 	<pre>Stuff I like:</pre>
