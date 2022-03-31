@@ -53,20 +53,20 @@
 
 	<pre>Stuff I like:</pre>
 	<ul>
-		<li>games, like:</li>
+		<li>Games, like:</li>
 		<ul>
 			<li>Minecraft (Ask to join my realms server!)</li>
 			<li>All social deduction games (Avalon, Among Us, etc)</li>
 			<li>Detroit: Become Human (More of a movie than a game IMHO)</li>
 			<li>Dying Light: Stay Human (The cost of operational drift is...becoming a Zombie)</li>
 			<li>Ratch and Clank (All of them!)</li>
-			<li>Spryo (All of them! - My "childhood" game)</li>
+			<li>Spyro (All of them! - My "childhood" game)</li>
 			<li>Ghost of Tsushima (Just started this one...)</li>
 			<li>Rocket League</li>
 			<li>Valorant</li>
 		</ul>
 		<li>
-			learning what other's are interested in (...like, a LOT. Tell me something you're passionate
+			Learning what others are interested in (...like, a LOT. Tell me something you're passionate
 			or curious about... Please...)
 		</li>
 		<li>
@@ -95,7 +95,7 @@
 		</ul>
 		<li>Fishing (rare moment of peace: sitting still, listening to quiet waves)</li>
 		<li>Snowboarding (rare moment of peace: flying down a mountain at high speeds)</li>
-		<li>travel (hoping to land a fully remote role next!)</li>
+		<li>Travel (hoping to land a fully remote role next!)</li>
 	</ul>
 
 	<pre>Photos of myself and my favorite people:</pre>
