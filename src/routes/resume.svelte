@@ -26,7 +26,8 @@
 	<h3>My Work Philosophy</h3>
 	<ul>
 		<li>Ask questions with forethought and humility.</li>
-		<li>Consider my coworkers and I to be in collaborative intellectual pursuit.</li>
+		<li>Respect my peer's time.</li>
+		<li>Consider my peers and I to be in collaborative intellectual pursuit, for the good of the customer.</li>
 		<li>Work hard, but remain light-hearted.</li>
 		<li>Pay it forward.</li>
 		<li>
