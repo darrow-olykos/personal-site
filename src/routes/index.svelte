@@ -14,11 +14,11 @@
 	<p>Welcome to my site.</p>
 
 	<h3>RESUME</h3>
-	<p>If you're a recruiter, you might be interested in my resume <a href="/resume">here</a>.</p>
+	<p>If you're a recruiter, then you might be interested in my resume <a href="/resume">here</a>.</p>
 
 	<h3>RUST PHILLY MEETUP</h3>
 	<p>
-		If you're a fellow software dev looking to hang out or talk shop, I spend a lot of time at <a
+		If you're a fellow software dev looking for where to hang out or talk shop with me, then you should know I spend a lot of time at <a
 			target="_blank"
 			rel="noopener noreferrer"
 			href="https://meetup.com/RustPhilly">Rust Philly Meetup</a
