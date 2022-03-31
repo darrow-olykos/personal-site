@@ -7,9 +7,13 @@
 			path: '/'
 		},*/
 		{
+			text: 'About Me',
+			path: '/'
+		},
+		{
 			text: 'Resume',
 			path: '/resume'
-		},
+		}
 	];
 </script>
 
