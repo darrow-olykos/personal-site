@@ -83,7 +83,7 @@
 			<li>Space Force</li>
 			<li>The Witcher</li>
 			<li>Altered Carbon</li>
-			<li>Demon Slayer (in progresss...)</li>
+			<li>Demon Slayer (in progress...)</li>
 			<li>The Flash</li>
 			<li>The Arrow</li>
 			<li>Kim's Convenience</li>
