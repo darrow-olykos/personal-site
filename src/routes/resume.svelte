@@ -23,12 +23,30 @@
 </svelte:head>
 
 <section>
+	<h3>My Philosophy</h3>
+	<ul>
+		<li>Ask questions with forethought and humility.</li>
+		<li>Consider my coworkers and I to be in collaborative intellectual pursuit.</li>
+		<li>Work hard, but remain light-hearted.</li>
+		<li>Pay it forward.</li>
+		<li>
+			When in doubt, gain inspiration from <a
+				href="https://cloud.google.com/architecture/devops/devops-culture-westrum-organizational-culture"
+				>Westrum Organizational Culture</a
+			>.
+		</li>
+	</ul>
 	<svelte:component this={PdfViewer} url={RESUME_PATH} scale={1} />
+	<br />
 	Click <a href={RESUME_PATH} download={RESUME_FILE_NAME}>here</a> to download.
 </section>
 
 <style>
 	section {
 		margin-top: 49px;
+	}
+
+	li {
+		margin-left: 36px;
 	}
 </style>
