@@ -17,7 +17,7 @@
 </svelte:head>
 
 <section>
-	<svelte:component this={PdfViewer} url="./no_number_chris_dillinger_resume.pdf" />
+	<svelte:component this={PdfViewer} url="/no_number_chris_dillinger_resume.pdf" />
 </section>
 
 <style>
