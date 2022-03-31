@@ -23,7 +23,7 @@
 </svelte:head>
 
 <section>
-	<h3>My Philosophy</h3>
+	<h3>My Work Philosophy</h3>
 	<ul>
 		<li>Ask questions with forethought and humility.</li>
 		<li>Consider my coworkers and I to be in collaborative intellectual pursuit.</li>
