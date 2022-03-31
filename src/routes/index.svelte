@@ -14,11 +14,11 @@
 	<p>Welcome to my site.</p>
 
 	<h3>RESUME</h3>
-	<p>Recruiters, you can find my resume <a href="/resume">here</a>.</p>
+	<p>If you're a recruiter, you might be interested in my resume <a href="/resume">here</a>.</p>
 
 	<h3>RUST PHILLY MEETUP</h3>
 	<p>
-		Software devs, you can find me running <a
+		If you're a fellow software dev looking to hang out or talk shop, I spend a lot of time at <a
 			target="_blank"
 			rel="noopener noreferrer"
 			href="https://meetup.com/RustPhilly">Rust Philly Meetup</a
@@ -41,11 +41,11 @@
 	<h3>ABOUT ME</h3>
 	<pre>I am a</pre>
 	<ul>
-		<li>Penn State Alumn (We Are!)</li>
+		<li>Penn State Alum (We Are!)</li>
 		<li>gamer</li>
 		<li>nerd</li>
 		<li>developer</li>
-		<li>brother & son (my brother's & parents mean the world to me)</li>
+		<li>brother & son (my family means the world to me)</li>
 		<li>(casual) snowboarder</li>
 		<li>(casual) musician (guitar, piano)</li>
 		<li>citizen of the city-state that is our universe</li>
