@@ -31,6 +31,8 @@
 		<li>Pay it forward.</li>
 		<li>
 			When in doubt, gain inspiration from <a
+				target="_blank"
+				rel="noopener noreferrer"
 				href="https://cloud.google.com/architecture/devops/devops-culture-westrum-organizational-culture"
 				>Westrum Organizational Culture</a
 			>.
