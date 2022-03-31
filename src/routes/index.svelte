@@ -85,7 +85,7 @@
 			<li>Altered Carbon</li>
 			<li>Demon Slayer (in progress...)</li>
 			<li>The Flash</li>
-			<li>The Arrow</li>
+			<li>Arrow</li>
 			<li>Kim's Convenience</li>
 			<li>B: The Beginning</li>
 			<li>Travelers</li>
