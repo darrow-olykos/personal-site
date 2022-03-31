@@ -14,7 +14,7 @@
 		PdfViewer = module.default;
 	});
 
-	const RESUME_FILE_NAME = 'no_number_chris_dillinger_resume_latest.pdf';
+	const RESUME_FILE_NAME = 'no_number_chris_dillinger_resume.pdf';
 	const RESUME_PATH = '/' + RESUME_FILE_NAME;
 </script>
 
