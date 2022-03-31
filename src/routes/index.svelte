@@ -58,7 +58,7 @@
 			<li>All social deduction games (Avalon, Among Us, etc)</li>
 			<li>Detroit: Become Human (More of a movie than a game IMHO)</li>
 			<li>Dying Light: Stay Human (The cost of operational drift is...becoming a Zombie)</li>
-			<li>Ratch and Clank (All of them!)</li>
+			<li>Ratchet and Clank (All of them!)</li>
 			<li>Spyro (All of them! - My "childhood" game)</li>
 			<li>Ghost of Tsushima (Just started this one...)</li>
 			<li>Rocket League</li>
