@@ -1,16 +1,7 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
-
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
 	export const hydrate = dev;
-
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
 	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
 	export const prerender = true;
 </script>
 
@@ -19,22 +10,50 @@
 </svelte:head>
 
 <div class="content">
-	<h1>Hello, friend.</h1>
+	<h1>Hey!</h1>
+	<p>Welcome to my site.</p>
 
-	<pre>My name is Chris. I am a</pre>
+	<h3>RESUME</h3>
+	<p>Recruiters, you can find my resume <a href="/resume">here</a>.</p>
+
+	<h3>RUST PHILLY MEETUP</h3>
+	<p>
+		Software devs, you can find me running <a
+			target="_blank"
+			rel="noopener noreferrer"
+			href="https://meetup.com/RustPhilly">Rust Philly Meetup</a
+		>
+		events.
+		<br /> Rust Philly has recurring events for:
+	</p>
 	<ul>
+		<li>Rust (Rust for Rustaceans Book Club)</li>
+		<li>Systems Design (Designing Data-Intensive Applications)</li>
+		<li>
+			Open Source (Contributing to <a
+				target="_blank"
+				rel="noopener noreferrer"
+				href="https://rome.tools">Rome Tools</a
+			>)
+		</li>
+	</ul>
+
+	<h3>ABOUT ME</h3>
+	<pre>I am a</pre>
+	<ul>
+		<li>Penn State Alumn (We Are!)</li>
 		<li>gamer</li>
 		<li>nerd</li>
-		<li>traveler</li>
 		<li>developer</li>
-		<li>brother</li>
-		<li>son</li>
+		<li>brother & son (my brother's & parents mean the world to me)</li>
+		<li>(casual) snowboarder</li>
+		<li>(casual) musician (guitar, piano)</li>
 		<li>citizen of the city-state that is our universe</li>
 	</ul>
 
-	<pre>I find joy in</pre>
+	<pre>Stuff I like:</pre>
 	<ul>
-		<li>games like:</li>
+		<li>games, like:</li>
 		<ul>
 			<li>Minecraft (Ask to join my realms server!)</li>
 			<li>All social deduction games (Avalon, Among Us, etc)</li>
@@ -46,8 +65,13 @@
 			<li>Rocket League</li>
 			<li>Valorant</li>
 		</ul>
-		<li>learning from other engineers (like, a LOT. Tell me something you're passionate about...)</li>
-		<li>Unapologetically binge watching shows on streaming services, some of my favorites, in no particular order:</li>
+		<li>
+			learning what other's are interested in (...like, a LOT. Tell me something you're passionate
+			or curious about... Please...)
+		</li>
+		<li>
+			Binge watching shows on streaming services, some of my favorites, in no particular order:
+		</li>
 		<ul>
 			<li>Shadow and Bone</li>
 			<li>Loki</li>
@@ -60,17 +84,43 @@
 			<li>Space Force</li>
 			<li>The Witcher</li>
 			<li>Altered Carbon</li>
+			<li>Demon Slayer (in progresss...)</li>
 			<li>The Flash</li>
 			<li>The Arrow</li>
 			<li>Kim's Convenience</li>
 			<li>B: The Beginning</li>
+			<li>Travelers</li>
+			<li>Shameless</li>
+			<li>The Umbrella Academy</li>
 		</ul>
-		<li>Fishing (only when I rarely go)</li>
-		<li>Snowboarding</li>
-		<li>Making lists</li>
+		<li>Fishing (rare moment of peace: sitting still, listening to quiet waves)</li>
+		<li>Snowboarding (rare moment of peace: flying down a mountain at high speeds)</li>
+		<li>travel (hoping to land a fully remote role next!)</li>
 	</ul>
 
-	<pre>Photos</pre>
+	<pre>Photos of myself and my favorite people:</pre>
+	<img
+		width="300px"
+		src="photos/vg-event-with-mom.jpeg"
+		alt="helping at a charity event with my mom"
+	/>
+	<img width="300px" src="photos/bros.jpeg" alt="my brothers and I when we were young" />
+	<img
+		width="300px"
+		src="photos/sushi-with-brandon.jpeg"
+		alt="making sushi with my older brother brandon"
+	/>
+	<img
+		width="300px"
+		src="photos/friend-pizza-boston.jpeg"
+		alt="in boston with good friend after eating good pizza"
+	/>
+	<img
+		width="300px"
+		src="photos/fishing-with-dad.jpeg"
+		alt="my dad and I on our way to go fishing"
+	/>
+	<img width="300px" src="photos/first-trip-boston.jpeg" alt="me and good friend" />
 </div>
 
 <style>
@@ -86,5 +136,9 @@
 
 	ul ul li {
 		margin-left: 96px;
+	}
+
+	h3 {
+		padding-top: 24px;
 	}
 </style>
