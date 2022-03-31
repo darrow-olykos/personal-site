@@ -28,7 +28,7 @@
 	</p>
 	<ul>
 		<li>Rust (Rust for Rustaceans Book Club)</li>
-		<li>Systems Design (Designing Data-Intensive Applications)</li>
+		<li>Systems Design (Designing Data-Intensive Applications Book Club)</li>
 		<li>
 			Open Source (Contributing to <a
 				target="_blank"
