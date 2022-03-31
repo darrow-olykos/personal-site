@@ -23,7 +23,7 @@
 </svelte:head>
 
 <section>
-	<svelte:component this={PdfViewer} url={RESUME_PATH} />
+	<svelte:component this={PdfViewer} url={RESUME_PATH} scale={1} />
 	Click <a href={RESUME_PATH} download={RESUME_FILE_NAME}>here</a> to download.
 </section>
 
