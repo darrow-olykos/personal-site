@@ -10,6 +10,9 @@
 		const module = await import('svelte-pdf');
 		PdfViewer = module.default;
 	});
+
+	const RESUME_FILE_NAME = 'no_number_chris_dillinger_resume_latest.pdf';
+	const RESUME_PATH = '/' + RESUME_FILE_NAME;
 </script>
 
 <svelte:head>
@@ -17,8 +20,8 @@
 </svelte:head>
 
 <section>
-	Click <a href="/no_number_chris_dillinger_resume.pdf" download="no_number_chris_dillinger_resume">here</a> to download resume.
-	<svelte:component this={PdfViewer} url="/no_number_chris_dillinger_resume.pdf" />
+	Click <a href={RESUME_PATH} download={RESUME_FILE_NAME}>here</a> to download resume.
+	<svelte:component this={PdfViewer} url={RESUME_PATH} />
 	(The PDF Renderer I'm using does not render in mobile browser)
 </section>
 
