@@ -4,10 +4,13 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
+	let structuredClone
 	let PdfViewer;
 
 	onMount(async () => {
+		const structuredCloneModule = await import ('@ungap/structured-clone');
 		const module = await import('svelte-pdf');
+		structuredClone = structuredCloneModule.default;
 		PdfViewer = module.default;
 	});
 
