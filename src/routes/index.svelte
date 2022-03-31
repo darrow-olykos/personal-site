@@ -46,7 +46,6 @@
 		<li>Nerd</li>
 		<li>Developer</li>
 		<li>Brother & son (my family means the world to me)</li>
-		<li>(casual) Snowboarder</li>
 		<li>(casual) Musician (guitar, piano)</li>
 		<li>Citizen of the city-state that is our universe</li>
 	</ul>
@@ -93,6 +92,7 @@
 			<li>Shameless</li>
 			<li>The Umbrella Academy</li>
 		</ul>
+		<li>Playing guitar & piano</li>
 		<li>Fishing (rare moment of peace: sitting still, listening to quiet waves)</li>
 		<li>Snowboarding (rare moment of peace: flying down a mountain at high speeds)</li>
 		<li>Travel (hoping to land a fully remote role next!)</li>
