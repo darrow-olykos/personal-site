@@ -76,7 +76,7 @@
 			<li>Shadow and Bone</li>
 			<li>Loki</li>
 			<li>Community &#60;- (Can never go wrong)</li>
-			<li>Cowboy Bepop</li>
+			<li>Cowboy Bebop</li>
 			<li>Love is Blind (It's good, I swear!)</li>
 			<li>The Good Place</li>
 			<li>Disenchantment</li>
